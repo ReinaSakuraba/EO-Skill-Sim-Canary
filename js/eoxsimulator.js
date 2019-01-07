@@ -58,7 +58,7 @@ class EOXSimulator extends Simulator {
     const old = this.class;
     if (old !== "None") old.resetSkillLevels();
 
-    this._class = value;
+    this._class = value === "None" ? "None" : parseInt(value);
     document.getElementById("class-selector-primary").value = value;
     this.class.vampire = this.vampire;
     this.disableClasses();
