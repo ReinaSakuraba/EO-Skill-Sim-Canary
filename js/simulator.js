@@ -387,7 +387,7 @@ class Simulator {
     const old = this.class;
     if (old !== "None") old.resetSkillLevels();
 
-    this._class = value;
+    this._class = value === "None" ? "None" : parseInt(value);
     document.getElementById("class-selector-primary").value = value;
     this.disableClasses();
     this.createSkillNodes();
@@ -401,7 +401,7 @@ class Simulator {
     const old = this.subClass;
     if (old !== "None") old.resetSkillLevels();
 
-    this._subClass = value;
+    this._subClass = value === "None" ? "None" : parseInt(value);
     document.getElementById("class-selector-secondary").value = value;
     this.disableClasses(false);
     this.createSkillNodes(false);

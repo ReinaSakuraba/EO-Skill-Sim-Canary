@@ -94,7 +94,7 @@ class EOXSimulator extends Simulator {
     let currentPos = 0;
 
     view[currentPos++] = this._class + 1;
-    view[currentPos++] = hasSub ? parseInt(this._subClass) + 1 : 0;
+    view[currentPos++] = hasSub ? this._subClass + 1 : 0;
     view[currentPos++] = this._currentLevel;
     view[currentPos++] = this._levelCap;
     view[currentPos++] = this._retireLevel;
