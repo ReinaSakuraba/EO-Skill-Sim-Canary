@@ -1,0 +1,7626 @@
+{
+  "Hero": {
+    "braveheart": {
+      "name_en": "Braveheart",
+      "name_jp": "ブレイブハート",
+      "desc": "For 3 turns, increases the chance of afterimage creation and all afterimage damage. The damage boost only applies while Force Boost is active.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 1
+    },
+    "miracleEdge": {
+      "name_en": "Miracle Edge",
+      "name_jp": "ミラクルエッジ",
+      "desc": "Deals melee cut damage to all enemies, and restores HP to all party members. This can restore HP over maximum HP. The overhealed amount is removed at the end of the turn.",
+      "stats": [
+        "STR"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "1": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 2
+    },
+    "afterimage": {
+      "name_en": "Afterimage",
+      "name_jp": "残影",
+      "desc": "When the user (or an afterimage) attacks with a skill, there's a chance to create an afterimage in an empty slot. The afterimage will attack with the same skill on the next turn, and vanish at the end of that turn. Does not activate for chases or counterattacks.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 3
+    },
+    "mirageSword": {
+      "name_en": "Mirage Sword",
+      "name_jp": "ミラージュソード",
+      "desc": "Deals ranged cut damage to one target. Has a high chance to create an afterimage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "3": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 4
+    },
+    "braveWide": {
+      "name_en": "Brave Wide",
+      "name_jp": "ブレイブワイド",
+      "desc": "Deals strong melee cut damage to one target. If this skill goes off before the target acts, including if the target could not act due to a bind or ailment, its range is extended to melee cut damage to all enemies.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 5
+    },
+    "freezingSlash": {
+      "name_en": "Freezing Slash",
+      "name_jp": "凍砕斬",
+      "desc": "Deals melee cut+ice damage to one target, with splash damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "5": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 6
+    },
+    "encouragement": {
+      "name_en": "Encouragement",
+      "name_jp": "鼓舞",
+      "desc": "When the user attacks with a skill, restores HP to all party members. HP restored is based on the user's max HP. Does not activate for links, chases or counterattacks.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 7
+    },
+    "herosBonds": {
+      "name_en": "Hero's Bonds",
+      "name_jp": "勇者の絆",
+      "desc": "When all party members' HP is above a set percentage, increases the user's attack and action speed.",
+      "stats": [],
+      "dep": {
+        "7": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 8
+    },
+    "shieldArts": {
+      "name_en": "Shield Arts",
+      "name_jp": "シールドアーツ",
+      "desc": "Deals melee bash damage to one target. It has a low action speed, but increases physical defense for all allies until it executes. Damage is based on the user's shield's DEF.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 9
+    },
+    "clearMind": {
+      "name_en": "Clear Mind",
+      "name_jp": "心頭滅却",
+      "desc": "Removes binds and ailments and restores TP to the user. Cannot be used if the user has no ailment or binds, and will not restores TP if they were cured prior to this skill being used.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 10
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 11
+    },
+    "shadowCharge": {
+      "name_en": "Shadow Charge",
+      "name_jp": "シャドウチャージ",
+      "desc": "Removes all afterimages. Until the end of the next turn, increases the user's attack and chance of creating afterimages. Number of afterimages consumed will not affect this skill's effect.",
+      "stats": [],
+      "dep": {
+        "4": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 12
+    },
+    "shadowBenefit": {
+      "name_en": "Shadow Benefit",
+      "name_jp": "恵影",
+      "desc": "When the user uses a skill while an afterimage is present, refunds a percentage of the TP used for the skill to the user.",
+      "stats": [],
+      "dep": {
+        "12": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 13
+    },
+    "shockSpark": {
+      "name_en": "Shock Spark",
+      "name_jp": "ショックスパーク",
+      "desc": "Deals melee cut damage to one target, and follows up with ranged volt damage to all enemies. The higher the target's cut resistance is, the higher the volt damage will be.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "6": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 14
+    },
+    "burstBlade": {
+      "name_en": "Burst Blade",
+      "name_jp": "バーストブレイド",
+      "desc": "Deals multiple instances of melee cut damage to one target. Number of attacks is a random number between 2, and 3 plus the number of enemies present.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "14": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 15
+    },
+    "herosProof": {
+      "name_en": "Hero's Proof",
+      "name_jp": "勇者の証",
+      "desc": "When all party members' HP is below a set percentage, increases the user's defense and chance of being targeted.",
+      "stats": [],
+      "dep": {
+        "8": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 16
+    },
+    "greatCourage": {
+      "name_en": "Great Courage",
+      "name_jp": "大勇",
+      "desc": "When an ally whose HP is below a set percentage is attacked, the user has a chance to cover that ally. This skill will prioritize the user's afterimage.",
+      "stats": [],
+      "dep": {
+        "16": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 17
+    },
+    "shieldMateria": {
+      "name_en": "Shield Materia",
+      "name_jp": "シールドマテリア",
+      "desc": "Deals melee bash damage to one target. It has a low action speed, but increases elemental defense for all allies until it executes. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "9": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 18
+    },
+    "fervor": {
+      "name_en": "Fervor",
+      "name_jp": "気負い",
+      "desc": "Transfers binds and ailments on allies in the user's row to the user, and restores Force to the user. If no binds or ailments are transferred, Force will not increase.",
+      "stats": [],
+      "dep": {
+        "10": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 19
+    },
+    "newChallenger": {
+      "name_en": "New Challenger",
+      "name_jp": "新たな強敵",
+      "desc": "Immediately enters battle with an increased chance of encountering rare breeds, and a chance of entering consecutive battles. Fails if the current location has no encounters.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 20
+    },
+    "thickShadow": {
+      "name_en": "Thick Shadow",
+      "name_jp": "濃影",
+      "desc": "Afterimages have a chance of not disappearing at the end of the turn.",
+      "stats": [],
+      "dep": {
+        "13": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 21
+    },
+    "actBreaker": {
+      "name_en": "Act Breaker",
+      "name_jp": "アクトブレイカー",
+      "desc": "Deals melee cut damage to one target. Attempts to inflict stun on the target. The higher the target's HP is, the higher the chance of stun is.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "15": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 22
+    },
+    "regimentRave": {
+      "name_en": "Regiment Rave",
+      "name_jp": "レジメントレイブ",
+      "desc": "At the end of the turn, deals melee cut+fire damage to one target. Adds 40% of all damage dealt to the target this turn by all party members to this attack's damage, up to a set limit.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "22": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 2
+      },
+      "id": 23
+    },
+    "forceGifter": {
+      "name_en": "Force Gifter",
+      "name_jp": "フォースギフター",
+      "desc": "Deals melee cut damage to one target. Increases Force for allies on the user's row instead of the user.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 24
+    },
+    "forceSaver": {
+      "name_en": "Force Saver",
+      "name_jp": "フォースセイブ",
+      "desc": "When the user's Force Boost times out, restores some Force to the user.",
+      "stats": [],
+      "dep": {
+        "24": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 3
+      },
+      "id": 25
+    },
+    "guardRush": {
+      "name_en": "Guard Rush",
+      "name_jp": "ガードラッシュ",
+      "desc": "Reduces all damage to all party members for one turn, and deals melee bash damage to one target at the end of the turn. If the attack hits, this skill cannot be used again for a set number of turns. Damage is based on the user's shield's DEF, and the number of times damage is reduced. If no damage reduction took place, the attack will not happen.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "18": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 26
+    }
+  },
+  "Protector": {
+    "shieldProtect": {
+      "name_en": "Shield Protect",
+      "name_jp": "大盾の守護",
+      "desc": "For 3 turns, increases damage reduction from shield skills.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 27
+    },
+    "perfectDefense": {
+      "name_en": "Perfect Defense",
+      "name_jp": "完全防御",
+      "desc": "This turn, completely negates all damaging attacks against the party.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "27": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 28
+    },
+    "frontGuard": {
+      "name_en": "Front Guard",
+      "name_jp": "フロントガード",
+      "desc": "Reduces physical damage to the front row for one turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 29
+    },
+    "backGuard": {
+      "name_en": "Back Guard",
+      "name_jp": "バッグガード",
+      "desc": "Reduces physical damage to the back row for one turn.",
+      "stats": [],
+      "dep": {
+        "29": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 30
+    },
+    "cellDivide": {
+      "name_en": "Cell Divide",
+      "name_jp": "セルディバイド",
+      "desc": "Covers one ally for one turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 31
+    },
+    "fortify": {
+      "name_en": "Fortify",
+      "name_jp": "渾身ディフェンス",
+      "desc": "Increases the user's defense for a set number of turns.",
+      "stats": [],
+      "dep": {
+        "31": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 32
+    },
+    "shieldSmite": {
+      "name_en": "Shield Smite",
+      "name_jp": "シールドスマイト",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict arm bind. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 33
+    },
+    "provoke": {
+      "name_en": "Provoke",
+      "name_jp": "挑発",
+      "desc": "Increases the user's defense and chance of being targeted for a set number of turns.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 34
+    },
+    "preProvoke": {
+      "name_en": "Pre-Provoke",
+      "name_jp": "先制挑発",
+      "desc": "If Provoke is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "34": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 35
+    },
+    "healingWall": {
+      "name_en": "Healing Wall",
+      "name_jp": "ヒールウォール",
+      "desc": "When the user defends, restores HP to allies on the user's row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 36
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 37
+    },
+    "recoveryGuard": {
+      "name_en": "Recovery Guard",
+      "name_jp": "リカバリーガード",
+      "desc": "Removes binds from one row, and reduces physical damage to that row for one turn.",
+      "stats": [],
+      "dep": {
+        "30": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 38
+    },
+    "aegis": {
+      "name_en": "Aegis",
+      "name_jp": "決死の覚悟",
+      "desc": "There is a chance for the user to survive fatal damage at 1 HP. Can activate once per battle at most.",
+      "stats": [],
+      "dep": {
+        "32": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 39
+    },
+    "shieldRush": {
+      "name_en": "Shield Rush",
+      "name_jp": "シールドラッシュ",
+      "desc": "Deals melee bash damage to all enemies, and reduces their physical attack for 3 turns. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "33": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 40
+    },
+    "keepGuard": {
+      "name_en": "Keep Guard",
+      "name_jp": "キープガード",
+      "desc": "Reduces all damage to one ally until the end of the next turn, and disables all Guard skills until then.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 41
+    },
+    "physDefUp": {
+      "name_en": "Phys DEF Up",
+      "name_jp": "物理防御ブースト",
+      "desc": "Increases physical defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 42
+    },
+    "elemDefUp": {
+      "name_en": "Elem DEF Up",
+      "name_jp": "属性防御ブースト",
+      "desc": "Increases elemental defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 43
+    },
+    "fireWall": {
+      "name_en": "Fire Wall",
+      "name_jp": "ファイアガード",
+      "desc": "Reduces one instance of fire damage against all party members. Higher levels upgrade reduction to null, then absorb.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 44
+    },
+    "iceWall": {
+      "name_en": "Ice Wall",
+      "name_jp": "フリーズガード",
+      "desc": "Reduces one instance of ice damage against all party members. Higher levels upgrade reduction to null, then absorb.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 45
+    },
+    "voltWall": {
+      "name_en": "Volt Wall",
+      "name_jp": "ショックガード",
+      "desc": "Reduces one instance of volt damage against all party members. Higher levels upgrade reduction to null, then absorb.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 46
+    },
+    "hpUp": {
+      "name_en": "HP Up",
+      "name_jp": "ＨＰブースト",
+      "desc": "Increases maximum HP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 0
+      },
+      "id": 47
+    },
+    "healGuard": {
+      "name_en": "Heal Guard",
+      "name_jp": "ヒールガード",
+      "desc": "Restores HP for one row, and reduces physical damage to that row for one turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "38": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 48
+    },
+    "lineDivide": {
+      "name_en": "Line Divide",
+      "name_jp": "ラインディバイド",
+      "desc": "Covers one row for one turn.",
+      "stats": [],
+      "dep": {
+        "39": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 49
+    },
+    "autoguard": {
+      "name_en": "Autoguard",
+      "name_jp": "オートガード",
+      "desc": "When the user is attacked, there is a chance to automatically reduce the damage.",
+      "stats": [],
+      "dep": {
+        "49": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 2
+      },
+      "id": 50
+    },
+    "shieldFlare": {
+      "name_en": "Shield Flare",
+      "name_jp": "シールドフレア",
+      "desc": "Until the end of the next turn, when the user is attacked, they will counterattack with ranged fire damage. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "40": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 51
+    },
+    "fullGuard": {
+      "name_en": "Full Guard",
+      "name_jp": "フルガード",
+      "desc": "Reduces all damage to all party members for one turn. Cannot be used again for a set number of turns.",
+      "stats": [],
+      "dep": {
+        "44": 2,
+        "45": 2,
+        "46": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 52
+    }
+  },
+  "Medic": {
+    "steadyHands": {
+      "name_en": "Steady Hands",
+      "name_jp": "集中治療",
+      "desc": "For 3 turns, increases the action speed of all actions, and the healing power of healing skills (including items). The TP cost of healing skills is halved.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 53
+    },
+    "medicalMiracle": {
+      "name_en": "Medical Miracle",
+      "name_jp": "超医術",
+      "desc": "Revives and removes ailments, binds and debuffs from all party members, and restores their HP.",
+      "stats": [
+        "WIS"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "53": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 54
+    },
+    "healing": {
+      "name_en": "Healing",
+      "name_jp": "ヒーリング",
+      "desc": "Restores HP to one ally.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1.5
+      },
+      "id": 55
+    },
+    "lineHeal": {
+      "name_en": "Line Heal",
+      "name_jp": "ラインヒール",
+      "desc": "Restores HP to one row.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "55": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 56
+    },
+    "patchUp": {
+      "name_en": "Patch Up",
+      "name_jp": "戦後手当",
+      "desc": "Restores HP to all allies at the end of battle. Does not activate if the party flees.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 57
+    },
+    "refresh": {
+      "name_en": "Refresh",
+      "name_jp": "リフレッシュ",
+      "desc": "Removes ailments from one ally. Higher level increases range to one row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 58
+    },
+    "antibodies": {
+      "name_en": "Antibodies",
+      "name_jp": "抗体",
+      "desc": "Increases the user's rate of recovery from binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 59
+    },
+    "revive": {
+      "name_en": "Revive",
+      "name_jp": "リザレクション",
+      "desc": "Revives one ally.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 60
+    },
+    "scavenge": {
+      "name_en": "Scavenge",
+      "name_jp": "博識",
+      "desc": "Increases item drop rate.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 61
+    },
+    "headDrop": {
+      "name_en": "Head Drop",
+      "name_jp": "ヘッドドロップ",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict head bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 62
+    },
+    "take": {
+      "name_en": "Take",
+      "name_jp": "採取",
+      "desc": "Occasionally gains more items when using Take points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 63
+    },
+    "delayedHeal": {
+      "name_en": "Delayed Heal",
+      "name_jp": "ディレイヒール",
+      "desc": "Restores HP to all party members at the start of the next turn. Cannot be used on consecutive turns. Ineffective if the user dies before the skill activates.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "56": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 1.5
+      },
+      "id": 64
+    },
+    "unbind": {
+      "name_en": "Unbind",
+      "name_jp": "バインドリカバリ",
+      "desc": "Removes binds from one ally. Higher levels increase range to one row.",
+      "stats": [],
+      "dep": {
+        "58": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 65
+    },
+    "groupTherapy": {
+      "name_en": "Group Therapy",
+      "name_jp": "一斉救護",
+      "desc": "For a set number of turns, increases the range of the user's healing skills, but decreases healing power and action speed.",
+      "stats": [],
+      "dep": {
+        "65": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 66
+    },
+    "finalGift": {
+      "name_en": "Final Gift",
+      "name_jp": "最後の癒し",
+      "desc": "When the user dies, restores HP to all allies.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "60": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 67
+    },
+    "autoRevive": {
+      "name_en": "Auto-Revive",
+      "name_jp": "オートリザレクト",
+      "desc": "When an ally dies, there is a chance to automatically revive that ally.",
+      "stats": [],
+      "dep": {
+        "67": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 68
+    },
+    "starDrop": {
+      "name_en": "Star Drop",
+      "name_jp": "スタードロップ",
+      "desc": "Deals melee bash damage to one target. Reduces their physical defense for 3 turns.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "62": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 69
+    },
+    "medicalRod": {
+      "name_en": "Medical Rod",
+      "name_jp": "メディカルロッド",
+      "desc": "Deals melee bash damage to one target. Reduces their elemental defense for 3 turns.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "69": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 70
+    },
+    "patrol": {
+      "name_en": "Patrol",
+      "name_jp": "警戒斥候",
+      "desc": "For a set number of steps, nullifies damage tiles and muddy floors, and greatly reduces other sources of damage while exploring.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 71
+    },
+    "elemDefUp": {
+      "name_en": "Elem DEF Up",
+      "name_jp": "属性防御ブースト",
+      "desc": "Increases elemental defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 72
+    },
+    "partyHeal": {
+      "name_en": "Party Heal",
+      "name_jp": "エリアヒール",
+      "desc": "Restores HP to all party members.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "64": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 73
+    },
+    "chaseHeal": {
+      "name_en": "Chase Heal",
+      "name_jp": "チェイスヒール",
+      "desc": "For one turn, automatically restores HP to allies when they are attacked for a set number of times. Every time this skill activates, its chance of activating decreases.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "64": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 74
+    },
+    "overheal": {
+      "name_en": "Overheal",
+      "name_jp": "オーバーヒール",
+      "desc": "Medic skills in battle can restore HP over party members' maximum HP by a set percentage. The overhealed amount is removed at the end of turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 75
+    },
+    "healDejaVu": {
+      "name_en": "Heal Deja Vu",
+      "name_jp": "ヒールデジャヴ",
+      "desc": "For a set number of turns, at the end of each turn, all party members will receive again the effect of the last Medic active skill they received, provided that they received at least one Medic active skill while Heal Deja Vu is active.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 76
+    },
+    "heavyStrike": {
+      "name_en": "Heavy Strike",
+      "name_jp": "ヘヴィストライク",
+      "desc": "Deals melee bash damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "70": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 77
+    },
+    "staffMastery": {
+      "name_en": "Staff Mastery",
+      "name_jp": "杖マスタリー",
+      "desc": "Increases physical attack and maximum TP when a staff is equipped.",
+      "stats": [],
+      "dep": {
+        "77": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 5
+      },
+      "id": 78
+    }
+  },
+  "Survivalist": {
+    "illusionStep": {
+      "name_en": "Illusion Step",
+      "name_jp": "夢幻陣形",
+      "desc": "For 3 turns, increases all party members' action speed and evasion.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 79
+    },
+    "mirageArrow": {
+      "name_en": "Mirage Arrow",
+      "name_jp": "ミラージュアロー",
+      "desc": "Deals ranged stab damage to one target. Decreases their accuracy and action speed for 3 turns.",
+      "stats": [
+        "STR"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "79": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 80
+    },
+    "powerShot": {
+      "name_en": "Power Shot",
+      "name_jp": "パワーショット",
+      "desc": "Deals ranged stab damage to one target, with line-piercing effects.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 1.5
+      },
+      "id": 81
+    },
+    "flameArrow": {
+      "name_en": "Flame Arrow",
+      "name_jp": "フレイムアロー",
+      "desc": "Deals ranged stab+fire damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "81": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 82
+    },
+    "blindArrow": {
+      "name_en": "Blind Arrow",
+      "name_jp": "ブラインドアロー",
+      "desc": "Deals ranged stab damage to one target. Attempts to inflict blind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 83
+    },
+    "chainDance": {
+      "name_en": "Chain Dance",
+      "name_jp": "チェインダンス",
+      "desc": "For one turn, increases the user's evasion and chance of being targeted.",
+      "stats": [],
+      "dep": {
+        "83": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 84
+    },
+    "patrol": {
+      "name_en": "Patrol",
+      "name_jp": "警戒斥候",
+      "desc": "For a set number of steps, nullifies damage tiles and muddy floors, and greatly reduces other sources of damage while exploring.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 85
+    },
+    "riskPerception": {
+      "name_en": "Risk Perception",
+      "name_jp": "危機感知",
+      "desc": "There is a set chance that blindsides will be negated.",
+      "stats": [],
+      "dep": {
+        "85": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 86
+    },
+    "resuscitate": {
+      "name_en": "Resuscitate",
+      "name_jp": "簡易手当",
+      "desc": "Restores HP to one ally. Can only be used in the field. Higher levels allow this skill to revive the target as well.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 87
+    },
+    "sortingSkill": {
+      "name_en": "Sorting Skill",
+      "name_jp": "整頓術",
+      "desc": "Increases inventory size.",
+      "stats": [],
+      "dep": {
+        "87": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 88
+    },
+    "naturalInstinct": {
+      "name_en": "Natural Instinct",
+      "name_jp": "野生の勘",
+      "desc": "Occasionally gains more items when using any gathering points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 89
+    },
+    "flankShot": {
+      "name_en": "Flank Shot",
+      "name_jp": "フランクショット",
+      "desc": "Deals ranged stab damage to one row.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "82": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 90
+    },
+    "finishingArrow": {
+      "name_en": "Finishing Arrow",
+      "name_jp": "仕留めの一矢",
+      "desc": "When the user attacks a target whose HP is below a set threshold, the user follows up with their weapon. Does not activate for links, chases or counterattacks.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "90": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 91
+    },
+    "multiShot": {
+      "name_en": "Multi-Shot",
+      "name_jp": "ダブルショット",
+      "desc": "Deals 2 instances of ranged stab damage to one enemy.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "82": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 92
+    },
+    "dropShot": {
+      "name_en": "Drop Shot",
+      "name_jp": "ドロップショット",
+      "desc": "Deals ranged stab damage to one target. Damage increases if the target is in the back row.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "92": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 93
+    },
+    "trickStep": {
+      "name_en": "Trick Step",
+      "name_jp": "トリックステップ",
+      "desc": "For a set number of turns, reduces the accuracy of one row of enemies.",
+      "stats": [],
+      "dep": {
+        "84": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 94
+    },
+    "stalker": {
+      "name_en": "Stalker",
+      "name_jp": "警戒歩行",
+      "desc": "For a set number of steps, reduces encounter rate.",
+      "stats": [],
+      "dep": {
+        "86": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 95
+    },
+    "efficiency": {
+      "name_en": "Efficiency",
+      "name_jp": "エフィシエント",
+      "desc": "For 5 turns, increases the HP restored by Medica and upgrades used by the user, and extends their range to one row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 96
+    },
+    "speedUp": {
+      "name_en": "Speed Up",
+      "name_jp": "素早さブースト",
+      "desc": "Increases accuracy, evasion and action speed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 97
+    },
+    "swapStep": {
+      "name_en": "Swap Step",
+      "name_jp": "アザーズステップ",
+      "desc": "Selected ally acts first this turn.",
+      "stats": [],
+      "dep": {
+        "97": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 98
+    },
+    "disablingShot": {
+      "name_en": "Disabling Shot",
+      "name_jp": "エイミングフット",
+      "desc": "When the user attacks with a bow skill, attempts to inflict leg bind.",
+      "stats": [],
+      "dep": {
+        "91": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 99
+    },
+    "sagittariusShot": {
+      "name_en": "Sagittarius Shot",
+      "name_jp": "サジタリウスの矢",
+      "desc": "On the third turn after using this skill, ranged stab damage is dealt to one target at the start of that turn. Attempts to inflict stun. Ineffective if the user dies before the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "93": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 100
+    },
+    "hazyShot": {
+      "name_en": "Hazy Shot",
+      "name_jp": "朧矢",
+      "desc": "Deals ranged stab damage to one target. Always hits. Can only be used if the user evaded an attack on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "94": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 101
+    },
+    "naturesBounty": {
+      "name_en": "Nature's Bounty",
+      "name_jp": "自然の恩恵",
+      "desc": "There is a chance to obtain extra rare items when gathering.",
+      "stats": [],
+      "dep": {
+        "95": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 102
+    },
+    "scapegoat": {
+      "name_en": "Scapegoat",
+      "name_jp": "スケープゴート",
+      "desc": "Selected ally will cover all party members a set number of times this turn. Ineffective if that ally has leg bind.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 103
+    },
+    "sneakAttack": {
+      "name_en": "Sneak Attack",
+      "name_jp": "奇襲",
+      "desc": "For a set number of steps, increases chance of preemptive attacks.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 104
+    }
+  },
+  "Ronin": {
+    "peerless": {
+      "name_en": "Peerless",
+      "name_jp": "無双",
+      "desc": "For 3 turns, stance duration will not decrease, and stances cannot be removed. In addition, the user gains the effect of all stances.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 105
+    },
+    "issen": {
+      "name_en": "Issen",
+      "name_jp": "一閃",
+      "desc": "Deals ranged cut damage to all enemies. Attempts to inflict instant death. Chance of instant death is increased against targets at low HP.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "105": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 106
+    },
+    "upperStance": {
+      "name_en": "Upper Stance",
+      "name_jp": "上段の構え",
+      "desc": "Increases attack when Upper Stance is active, and increases the duration of Upper Stance. At the start of each battle, the user automatically assumes the stance with the highest skill level.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 107
+    },
+    "upwardSlash": {
+      "name_en": "Upward Slash",
+      "name_jp": "逆袈裟",
+      "desc": "Deals melee cut damage to one target. Assumes Upper Stance after use. Critical hit if used during Upper Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "107": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 108
+    },
+    "clearStance": {
+      "name_en": "Clear Stance",
+      "name_jp": "青眼の構え",
+      "desc": "Increases defense and Ronin skills' infliction rate when Clear Stance is active, and increases the duration of Clear Stance. At the start of each battle, the user automatically assumes the stance with the highest skill level.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 109
+    },
+    "chargingThrust": {
+      "name_en": "Charging Thrust",
+      "name_jp": "貫突",
+      "desc": "Deals melee stab damage to one target. Assumes Clear Stance after use. Critical hit if used during Clear Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "109": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 110
+    },
+    "drawingStance": {
+      "name_en": "Drawing Stance",
+      "name_jp": "居合の構え",
+      "desc": "Increases accuracy, evasion and action speed when Drawing Stance is active, and increases the duration of Drawing Stance. At the start of each battle, the user automatically assumes the stance with the highest skill level.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 111
+    },
+    "sheathStrike": {
+      "name_en": "Sheath Strike",
+      "name_jp": "鞘撃",
+      "desc": "Deals melee bash damage to one target. Assumes Drawing Stance after use. Critical hit if used during Drawing Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "111": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 112
+    },
+    "airBlade": {
+      "name_en": "Air Blade",
+      "name_jp": "空刃",
+      "desc": "Deals ranged cut damage to one target. Critical hit if used during any stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 113
+    },
+    "armStrike": {
+      "name_en": "Arm Strike",
+      "name_jp": "小手討ち",
+      "desc": "Deals melee stab damage to one target. Attempts to inflict arm bind. Critical hit if used during any stance.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 114
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 115
+    },
+    "breath": {
+      "name_en": "Breath",
+      "name_jp": "息吹",
+      "desc": "Restores HP to the user and allies adjacent to the user.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 116
+    },
+    "helmSplitter": {
+      "name_en": "Helm Splitter",
+      "name_jp": "兜割り ",
+      "desc": "Requires any stance. Deals melee cut damage to one target. Low accuracy, ignores cut resistance. Reduces stance duration by 2 after use. Critical hit if used during Upper Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "108": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 117
+    },
+    "flameGrater": {
+      "name_en": "Flame Grater",
+      "name_jp": "卸し焔",
+      "desc": "Deals melee cut+fire damage to one target. Critical hit if used during Upper Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "117": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 118
+    },
+    "hazeSlash": {
+      "name_en": "Haze Slash",
+      "name_jp": "霞斬り",
+      "desc": "Requires any stance. Deals melee cut damage to one target. Attempts to inflict sleep. Reduces stance duration by 2 after use. Critical hit if used during Clear Stance.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "110": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 119
+    },
+    "lightningStab": {
+      "name_en": "Lightning Stab",
+      "name_jp": "雷耀突き",
+      "desc": "Deals melee stab+volt damage to one target. Critical hit if used during Clear Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "119": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 120
+    },
+    "horizontalSlice": {
+      "name_en": "Horizontal Slice",
+      "name_jp": "横一文字",
+      "desc": "Requires any stance. Deals melee cut damage to one row. Reduces stance duration by 2 after use. Critical hit if used during Drawing Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "112": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 121
+    },
+    "frigidSlash": {
+      "name_en": "Frigid Slash",
+      "name_jp": "抜刀氷雪",
+      "desc": "Deals melee cut+ice damage to one target. Critical hit if used during Drawing Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "121": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 122
+    },
+    "duel": {
+      "name_en": "Duel",
+      "name_jp": "果し合い",
+      "desc": "Increases damage when attacking enemies that the user attacked last turn.",
+      "stats": [],
+      "dep": {
+        "113": 2,
+        "114": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4.5
+      },
+      "id": 123
+    },
+    "physAtkUp": {
+      "name_en": "Phys ATK Up",
+      "name_jp": "物理攻撃ブースト",
+      "desc": "Increases physical attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 124
+    },
+    "swallowStrike": {
+      "name_en": "Swallow Strike",
+      "name_jp": "ツバメがえし",
+      "desc": "Requires any stance. Deals multiple instances of melee cut damage to one target. Removes stance after use, and disables skills on the next turn. Critical hit if used during Upper Stance.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "118": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 125
+    },
+    "bluntingStab": {
+      "name_en": "Blunting Stab",
+      "name_jp": "鈍通し",
+      "desc": "Requires any stance. Deals melee stab damage to one target. Attempts to inflict petrify. Removes stance after use, and disables skills on the next turn. Critical hit if used during Clear Stance.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "120": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 126
+    },
+    "petalScatter": {
+      "name_en": "Petal Scatter",
+      "name_jp": "散華",
+      "desc": "Requires any stance. Deals ranged cut damage to all targets. Removes stance after use, and disables skills on the next turn. Critical hit if used during Drawing Stance. Deals less damage based on the number of targets.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "122": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 127
+    },
+    "proofOfMastery": {
+      "name_en": "Proof of Mastery",
+      "name_jp": "免許皆伝",
+      "desc": "Increases the effect of all stances.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 128
+    },
+    "risingSpirit": {
+      "name_en": "Rising Spirit",
+      "name_jp": "戦意高揚",
+      "desc": "At the end of the turn, if a stance is active, restores TP to the user.",
+      "stats": [],
+      "dep": {
+        "128": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 4
+      },
+      "id": 129
+    },
+    "speedUp": {
+      "name_en": "Speed Up",
+      "name_jp": "素早さブースト",
+      "desc": "Increases accuracy, evasion and action speed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 130
+    }
+  },
+  "War Magus": {
+    "warEdgePower": {
+      "name_en": "War Edge Power",
+      "name_jp": "巫剣の力",
+      "desc": "For 3 turns, War Edge skills can activate additional effects even against targets without an ailment.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 131
+    },
+    "fairyRobe": {
+      "name_en": "Fairy Robe",
+      "name_jp": "大巫術：精霊衣",
+      "desc": "Removes ailments and binds from all party members, and restores their HP. This turn, negates all binds, ailments, stun, instant death and debuffs against all party members.",
+      "stats": [
+        "WIS"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "131": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 132
+    },
+    "warHeal": {
+      "name_en": "War Heal",
+      "name_jp": "巫術：再生",
+      "desc": "Restores HP to one ally at the start of the turn, then at the end of the turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1.5
+      },
+      "id": 133
+    },
+    "warHealLine": {
+      "name_en": "War Heal Line",
+      "name_jp": "巫術：再生帯",
+      "desc": "Restores HP to one row at the start of the turn, then at the end of the turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "133": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 134
+    },
+    "randomDisease": {
+      "name_en": "Random Disease",
+      "name_jp": "巫術：乱疫",
+      "desc": "Attempts to inflict one of poison, paralyze, blind, sleep or curse on one target.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3.5
+      },
+      "id": 135
+    },
+    "strengthSlash": {
+      "name_en": "Strength Slash",
+      "name_jp": "巫剣：霊攻衰斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, decreases their attack for 7 turns.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "135": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 136
+    },
+    "guardSlash": {
+      "name_en": "Guard Slash",
+      "name_jp": "巫剣：霊防衰斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, decreases their defense for 7 turns.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "135": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 137
+    },
+    "displace": {
+      "name_en": "Displace",
+      "name_jp": "巫術：転移",
+      "desc": "Removes ailments and binds from one ally, and attempts to inflict them on one enemy.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 138
+    },
+    "vampire": {
+      "name_en": "Vampire",
+      "name_jp": "吸命",
+      "desc": "When the user deals damage to an enemy with an ailment, restores HP to the user's row. Can only activate once per turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 139
+    },
+    "take": {
+      "name_en": "Take",
+      "name_jp": "採取",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 140
+    },
+    "warEdgeMastery": {
+      "name_en": "War Edge Mastery",
+      "name_jp": "巫剣マスタリー",
+      "desc": "User can use sword skills with staff. Increases maximum TP when a sword is equipped; increases damage when a staff is equipped.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 141
+    },
+    "warRevive": {
+      "name_en": "War Revive",
+      "name_jp": "巫術：反魂",
+      "desc": "Revives one ally at the start of the turn, then attempts to revive them again at the end of the turn.",
+      "stats": [],
+      "dep": {
+        "134": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1.5
+      },
+      "id": 142
+    },
+    "artery": {
+      "name_en": "Artery",
+      "name_jp": "巫術：脈動",
+      "desc": "For 3 turns, automatically restores HP for all party members when they act, once per turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "142": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 143
+    },
+    "warResponse": {
+      "name_en": "War Response",
+      "name_jp": "巫術：呼応",
+      "desc": "For 3 turns, automatically restores HP for all party members when the debuffed enemy acts, once per turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "142": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 144
+    },
+    "headcut": {
+      "name_en": "Headcut",
+      "name_jp": "巫剣：霊封頭斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, attempts to inflict head bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "136": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 145
+    },
+    "armcut": {
+      "name_en": "Armcut",
+      "name_jp": "巫剣：霊封腕斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, attempts to inflict arm bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "137": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 146
+    },
+    "legcut": {
+      "name_en": "Legcut",
+      "name_jp": "巫剣：霊封脚斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, attempts to inflict leg bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "145": 2,
+        "146": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 3.5
+      },
+      "id": 147
+    },
+    "rouse": {
+      "name_en": "Rouse",
+      "name_jp": "奮起",
+      "desc": "Increases the user's Force gain based on the number of enemies with binds.",
+      "stats": [],
+      "dep": {
+        "139": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 148
+    },
+    "hpUp": {
+      "name_en": "HP Up",
+      "name_jp": "ＨＰブースト",
+      "desc": "Increases maximum HP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 149
+    },
+    "statusDefUp": {
+      "name_en": "Status DEF Up",
+      "name_jp": "抑制防御ブースト",
+      "desc": "Decreases the chance of being inflicted with binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 150
+    },
+    "warHealAll": {
+      "name_en": "War Heal All",
+      "name_jp": "巫術：再生陣",
+      "desc": "Restores HP to all party members at the start of the turn, then at the end of the turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "143": 2,
+        "144": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1.5
+      },
+      "id": 151
+    },
+    "barrier": {
+      "name_en": "Barrier",
+      "name_jp": "巫術：結界",
+      "desc": "For one turn, there is a chance to nullify binds, ailments and debuffs against all party members, up to a set number of times.",
+      "stats": [],
+      "dep": {
+        "151": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 1.5
+      },
+      "id": 152
+    },
+    "ailingSlash": {
+      "name_en": "Ailing Slash",
+      "name_jp": "巫剣：霊攻大斬",
+      "desc": "Deals melee cut+almighty damage to one target. If the target has an ailment, increases damage dealt.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "147": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3.5
+      },
+      "id": 153
+    },
+    "spiritDrain": {
+      "name_en": "Spirit Drain",
+      "name_jp": "吸気",
+      "desc": "When the user deals damage to an enemy with both an ailment and a bind, restores TP to the user's row. Can only activate once per turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "148": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 154
+    },
+    "plague": {
+      "name_en": "Plague",
+      "name_jp": "発疫",
+      "desc": "User's normal attack attempts to inflict poison, paralyze, blind, sleep and curse.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "154": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 5
+      },
+      "id": 155
+    },
+    "physAtkUp": {
+      "name_en": "Phys ATK Up",
+      "name_jp": "物理攻撃ブースト",
+      "desc": "Increases physical attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 156
+    }
+  },
+  "Highlander": {
+    "heroBattle": {
+      "name_en": "Hero Battle",
+      "name_jp": "英雄の戦い",
+      "desc": "For 3 turns, spear skills will have increased power, and restore HP to all party members based on damage dealt. Spear skills that activate instant death will still restore HP based on the damage that would have been dealt.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 157
+    },
+    "gaeBolg": {
+      "name_en": "Gae Bolg",
+      "name_jp": "ゲイボルグ",
+      "desc": "Deals ranged stab damage to all enemies, and restores TP to the user based on damage dealt.",
+      "stats": [
+        "STR"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "157": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 158
+    },
+    "longThrust": {
+      "name_en": "Long Thrust",
+      "name_jp": "ロングスラスト",
+      "desc": "Deals ranged stab damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 159
+    },
+    "spearAssist": {
+      "name_en": "Spear Assist",
+      "name_jp": "スピアインボルブ",
+      "desc": "Deals melee stab damage to one target at the end of the turn. If an elemental attack was used by an ally beforehand, that element is added to the attack and its damage is increased. If more than one elemental attack was used, the most recent element applies.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "159": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 160
+    },
+    "turningTide": {
+      "name_en": "Turning Tide",
+      "name_jp": "ハーベスト",
+      "desc": "When the user defeats an enemy, restores HP to all party members.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 2.5
+      },
+      "id": 161
+    },
+    "drainingThrust": {
+      "name_en": "Draining Thrust",
+      "name_jp": "シングルスラスト",
+      "desc": "Consumes the user's HP to deal melee stab damage to the enemy front row.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "161": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 162
+    },
+    "legionThrust": {
+      "name_en": "Legion Thrust",
+      "name_jp": "レギオンスラスト",
+      "desc": "Consumes the HP of all allies other than the user to deal melee stab damage to the enemy front row.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "161": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 163
+    },
+    "spiritShield": {
+      "name_en": "Spirit Shield",
+      "name_jp": "不可視の霊盾",
+      "desc": "Consumes the user's HP to increase the elemental defense of one row for a set number of turns.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 164
+    },
+    "bloodVeil": {
+      "name_en": "Blood Veil",
+      "name_jp": "ブラッドベール",
+      "desc": "When the user loses HP, increases defense until the end of the turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 165
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 166
+    },
+    "hpUp": {
+      "name_en": "HP Up",
+      "name_jp": "ＨＰブースト",
+      "desc": "Increases maximum HP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 167
+    },
+    "headPierce": {
+      "name_en": "Head Pierce",
+      "name_jp": "ブレインレンド",
+      "desc": "Deals melee stab damage to one target. Attempts to inflict head bind and instant death.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "160": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 168
+    },
+    "drainingBurst": {
+      "name_en": "Draining Burst",
+      "name_jp": "シングルバースト",
+      "desc": "Consumes the user's HP to deal melee stab damage to all enemies.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "162": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 169
+    },
+    "delayedCharge": {
+      "name_en": "Delayed Charge",
+      "name_jp": "ディレイチャージ",
+      "desc": "Consumes the user's HP to deal ranged stab damage to one target at the end of a set number of turns after. Damage is increased based on the number of turns passed before its activation. Ineffective if the user dies before the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 170
+    },
+    "legionBurst": {
+      "name_en": "Legion Burst",
+      "name_jp": "レギオンバースト",
+      "desc": "Consumes the HP of all allies other than the user to deal melee stab damage to all enemies.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "163": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 171
+    },
+    "bloodFortune": {
+      "name_en": "Blood Fortune",
+      "name_jp": "グッドラック",
+      "desc": "Consumes all party members' HP to increase their infliction rate of binds and ailments for a set number of turns.",
+      "stats": [],
+      "dep": {
+        "164": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 172
+    },
+    "battleInstincts": {
+      "name_en": "Battle Instinct",
+      "name_jp": "防衛本能",
+      "desc": "At the start of battle, there is a chance to cast a buff on all party members that negates ailments once for 3 turns. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "172": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 173
+    },
+    "bloodyOffense": {
+      "name_en": "Bloody Offense",
+      "name_jp": "ブラッドウェポン",
+      "desc": "For a set number of turns, one row of allies will have increased attack, but lose HP every time they act.",
+      "stats": [],
+      "dep": {
+        "165": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 174
+    },
+    "bloodlust": {
+      "name_en": "Bloodlust",
+      "name_jp": "血の暴走",
+      "desc": "When the user loses HP, there is a chance that they will automatically attack with their weapon.",
+      "stats": [],
+      "dep": {
+        "174": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 175
+    },
+    "physDefUp": {
+      "name_en": "Phys DEF Up",
+      "name_jp": "物理防御ブースト",
+      "desc": "Increases physical defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 176
+    },
+    "spearReversal": {
+      "name_en": "Spear Reversal",
+      "name_jp": "スピアリバーサル",
+      "desc": "Deals melee stab damage to one target. Damage is increased if the target has higher percentage of HP remaining than the user.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "168": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 177
+    },
+    "crossCharge": {
+      "name_en": "Cross Charge",
+      "name_jp": "クロスチャージ",
+      "desc": "Consumes the user's HP to deal melee stab damage to one target. If currently charging for Delayed Charge, activates it and increases Cross Charge's damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "170": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 178
+    },
+    "legionCharge": {
+      "name_en": "Legion Charge",
+      "name_jp": "レギオンチャージ",
+      "desc": "Consumes the HP of all allies other than the user to deal melee stab damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "171": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 179
+    },
+    "alliedBonds": {
+      "name_en": "Allied Bonds",
+      "name_jp": "絆の恩恵",
+      "desc": "If the user's skill consumed the HP of allies on the user's row, restores their TP at the end of the turn.",
+      "stats": [],
+      "dep": {
+        "179": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 3
+      },
+      "id": 180
+    },
+    "blackSabbath": {
+      "name_en": "Black Sabbath",
+      "name_jp": "ブラックサバス",
+      "desc": "Deals ranged almighty damage to all enemies, and restores all party members' HP based on damage dealt.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "175": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 181
+    },
+    "physAtkUp": {
+      "name_en": "Phys ATK Up",
+      "name_jp": "物理攻撃ブースト",
+      "desc": "Increases physical attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 182
+    }
+  },
+  "Gunner": {
+    "actionBoost": {
+      "name_en": "Action Boost",
+      "name_jp": "アクトブースト",
+      "desc": "For 3 turns, all gun skills will activate twice. The second activation will have reduced power, but no TP cost.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 183
+    },
+    "supremeBolt": {
+      "name_en": "Supreme Bolt",
+      "name_jp": "至高の魔弾",
+      "desc": "Deals ranged stab damage to one target. Attempts to stun the target with a high chance of success.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "183": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 184
+    },
+    "rapidFire": {
+      "name_en": "Rapid Fire",
+      "name_jp": "ラピッドファイア",
+      "desc": "Deals 3 instances of ranged stab damage to one target. Low accuracy.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 185
+    },
+    "spreadShot": {
+      "name_en": "Spread Shot",
+      "name_jp": "拡散弾",
+      "desc": "Deals ranged stab damage to one target, with splash damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "185": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 186
+    },
+    "legSnipe": {
+      "name_en": "Leg Snipe",
+      "name_jp": "レッグスナイプ",
+      "desc": "Deals ranged stab damage to one target. Always hits. Attempts to inflict leg bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 187
+    },
+    "armSnipe": {
+      "name_en": "Arm Snipe",
+      "name_jp": "アームスナイプ",
+      "desc": "Deals ranged stab damage to one target. Always hits. Attempts to inflict arm bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "187": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 188
+    },
+    "coverFire": {
+      "name_en": "Cover Fire",
+      "name_jp": "後方支援",
+      "desc": "When the user defends while in the back row, restores HP to the front row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 189
+    },
+    "shellShock": {
+      "name_en": "Shell Shock",
+      "name_jp": "後方撹乱",
+      "desc": "For one turn, reduces attack, defense, accuracy and evasion for enemies in the back row, and attempts to inflict stun on them.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "189": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 190
+    },
+    "medicBullet": {
+      "name_en": "Medic Bullet",
+      "name_jp": "ドラッグバレット",
+      "desc": "Restores HP and removes ailments from one ally.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 191
+    },
+    "popFlares": {
+      "name_en": "Pop Flares",
+      "name_jp": "照明弾",
+      "desc": "For 3 turns, increases accuracy for all allies.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 192
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 193
+    },
+    "leadingShot": {
+      "name_en": "Leading Shot",
+      "name_jp": "陽動射撃",
+      "desc": "Deals ranged stab damage to one row, and reduces their evasion.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "186": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 194
+    },
+    "wildShot": {
+      "name_en": "Wild Shot",
+      "name_jp": "掃射",
+      "desc": "Deals ranged stab damage to all enemies.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "194": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 195
+    },
+    "headSnipe": {
+      "name_en": "Head Snipe",
+      "name_jp": "ヘッドスナイプ",
+      "desc": "Deals ranged stab damage to one target. Always hits. Attempts to inflict head bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "188": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 196
+    },
+    "actQuick": {
+      "name_en": "Act Quick",
+      "name_jp": "クイックアクト",
+      "desc": "Until the end of the next turn, reduces TP usage and increases action speed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 197
+    },
+    "chargedShot": {
+      "name_en": "Charged Shot",
+      "name_jp": "チャージショット",
+      "desc": "Deals ranged stab damage to one target. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "197": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 198
+    },
+    "preemptiveShell": {
+      "name_en": "Preemptive Shell",
+      "name_jp": "先制撹乱",
+      "desc": "If Shell Shock is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "190": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 199
+    },
+    "autoFlare": {
+      "name_en": "Auto-Flare",
+      "name_jp": "先制照明弾",
+      "desc": "If Pop Flares is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "192": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 200
+    },
+    "penetrator": {
+      "name_en": "Penetrator",
+      "name_jp": "ペネトレイター",
+      "desc": "When attacking a single target, there is a chance that line-piercing effects will be added. Does not activate for skills with multiple instances of damage.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 201
+    },
+    "tpUp": {
+      "name_en": "TP Up",
+      "name_jp": "ＴＰブースト",
+      "desc": "Increases maximum TP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 202
+    },
+    "ricochet": {
+      "name_en": "Ricochet",
+      "name_jp": "跳弾",
+      "desc": "Deals multiple instances of ranged stab damage to random targets. Low accuracy. Higher level increases the number of attacks.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "195": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 203
+    },
+    "chargedFire": {
+      "name_en": "Charged Fire",
+      "name_jp": "チャージフレイム",
+      "desc": "Deals ranged stab+fire damage to one target. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "198": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 204
+    },
+    "chargedIce": {
+      "name_en": "Charged Ice",
+      "name_jp": "チャージアイス",
+      "desc": "Deals ranged stab+ice damage to one target. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "198": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 205
+    },
+    "chargedVolt": {
+      "name_en": "Charged Volt",
+      "name_jp": "チャージサンダー",
+      "desc": "Deals ranged stab+volt damage to one target. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "198": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 206
+    },
+    "physAtkUp": {
+      "name_en": "Phys ATK Up",
+      "name_jp": "物理攻撃ブースト",
+      "desc": "Increases physical attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 207
+    },
+    "doubleAction": {
+      "name_en": "Double Action",
+      "name_jp": "ダブルアクション",
+      "desc": "Attack skills have a chance of activating twice. Does not activate for links, chases and counterattacks.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 208
+    }
+  },
+  "Sovereign": {
+    "victoryVow": {
+      "name_en": "Victory Vow",
+      "name_jp": "勝利への誓い",
+      "desc": "For 3 turns, increases Order skills' range to all party members, and reduces their TP cost by half.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 209
+    },
+    "proofOfNobility": {
+      "name_en": "Proof of Nobility",
+      "name_jp": "高潔の証",
+      "desc": "This turn, buffs on all allies cannot be removed, and buffs that enhance attack, defense, infliction chance, ailment and binds resistance, healing, accuracy and evasion are doubled in strength.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "209": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 210
+    },
+    "attackOrder": {
+      "name_en": "Attack Order",
+      "name_jp": "攻撃の号令",
+      "desc": "For a set number of turns, increases attack for one row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 211
+    },
+    "fireArms": {
+      "name_en": "Fire Arms",
+      "name_jp": "ファイアアームズ",
+      "desc": "For a set number of turns, imbues one row of allies' weapons with fire, and increases their fire-elemental attack.",
+      "stats": [],
+      "dep": {
+        "211": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 212
+    },
+    "freezeArms": {
+      "name_en": "Freeze Arms",
+      "name_jp": "フリーズアームズ",
+      "desc": "For a set number of turns, imbues one row of allies' weapons with ice, and increases their ice-elemental attack.",
+      "stats": [],
+      "dep": {
+        "211": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 213
+    },
+    "shockArms": {
+      "name_en": "Shock Arms",
+      "name_jp": "ショックアームズ",
+      "desc": "For a set number of turns, imbues one row of allies' weapons with volt, and increases their volt-elemental attack.",
+      "stats": [],
+      "dep": {
+        "211": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 214
+    },
+    "guardOrder": {
+      "name_en": "Guard Order",
+      "name_jp": "防御の号令",
+      "desc": "For a set number of turns, increases defense for one row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 215
+    },
+    "reinforce": {
+      "name_en": "Reinforce",
+      "name_jp": "リインフォース",
+      "desc": "When the user casts a buff, restores HP to all affected allies.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "215": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 216
+    },
+    "royalVeil": {
+      "name_en": "Royal Veil",
+      "name_jp": "ロイヤルベール",
+      "desc": "At the end of the turn, if the user's HP is full, restores HP to all party members. Only one instance of this skill can activate per turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 217
+    },
+    "monarchMarch": {
+      "name_en": "Monarch March",
+      "name_jp": "キングスマーチ",
+      "desc": "During exploration, restores HP to all allies for every 3 steps taken.",
+      "stats": [],
+      "dep": {
+        "217": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 218
+    },
+    "take": {
+      "name_en": "Take",
+      "name_jp": "採取",
+      "desc": "Occasionally gains more items when using Take points.",
+      "unique": true,
+      "stats": [],
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 219
+    },
+    "negotiation": {
+      "name_en": "Negotiation",
+      "name_jp": "エクスチェンジ",
+      "desc": "Removes the oldest buff and debuff from one ally, and restores HP and TP to them based on the number of removals.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 220
+    },
+    "majesty": {
+      "name_en": "Majesty",
+      "name_jp": "王の威厳",
+      "desc": "Once per turn, when the user is damaged while having a buff active, their HP is restored.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 0
+      },
+      "id": 221
+    },
+    "royalLineage": {
+      "name_en": "Royal Lineage",
+      "name_jp": "王家の血統",
+      "desc": "When the user is buffed, their TP is restored. Does not activate if the buff negated a debuff.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 0
+      },
+      "id": 222
+    },
+    "elementalBombI": {
+      "name_en": "Elemental Bomb I",
+      "name_jp": "エレメントボムⅠ",
+      "desc": "Removes elemental imbue from one ally to deal ranged damage of that element to all enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "212": 1,
+        "213": 1,
+        "214": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 223
+    },
+    "rallyOrder": {
+      "name_en": "Rally Order",
+      "name_jp": "覇気の号令",
+      "desc": "For a set number of turns, increases maximum HP for one row.",
+      "stats": [],
+      "dep": {
+        "216": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 3.5
+      },
+      "id": 224
+    },
+    "protectOrder": {
+      "name_en": "Protect Order",
+      "name_jp": "庇護の号令",
+      "desc": "For a set number of turns, restores HP at the end of each turn for one row of allies.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "216": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 4.5
+      },
+      "id": 225
+    },
+    "preventOrder": {
+      "name_en": "Prevent Order",
+      "name_jp": "予防の号令",
+      "desc": "For a set number of turns, one row of allies may negate binds or ailments once.",
+      "stats": [],
+      "dep": {
+        "224": 2,
+        "225": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 226
+    },
+    "pairOrder": {
+      "name_en": "Pair Order",
+      "name_jp": "ペアオーダー",
+      "desc": "This turn, allies with buffs will restore TP based on damage taken when they are attacked.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 227
+    },
+    "healOrder": {
+      "name_en": "Heal Order",
+      "name_jp": "ヒールオーダー",
+      "desc": "This turn, allies with buffs will restore HP based on damage dealt when they attack. Attacks that activate instant death will still restore HP based on the damage that would have dealt.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 228
+    },
+    "statusDefUp": {
+      "name_en": "Status DEF Up",
+      "name_jp": "抑制防御ブースト",
+      "desc": "Decreases the chance of being inflicted with binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 0
+      },
+      "id": 229
+    },
+    "elementalBombII": {
+      "name_en": "Elemental Bomb II",
+      "name_jp": "エレメントボムⅡ",
+      "desc": "Removes elemental imbue from one ally to deal 3 instances of ranged damage of that element to random enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "223": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 230
+    },
+    "clearance": {
+      "name_en": "Clearance",
+      "name_jp": "クリアランス",
+      "desc": "Removes all buffs and debuffs from all allies and enemies, and restores HP and TP to all allies based on the number of removals.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 231
+    },
+    "dauntlessOrder": {
+      "name_en": "Dauntless Order",
+      "name_jp": "不屈の号令",
+      "desc": "For a set number of turns, one row of allies may endure fatal damage once with a set amount of HP.",
+      "stats": [],
+      "dep": {
+        "226": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 232
+    },
+    "lastOrder": {
+      "name_en": "Last Order",
+      "name_jp": "ラストオーダー",
+      "desc": "Removes all buffs from self to increase attack and defense for all allies this turn. Can only be used if the user has 3 buffs.",
+      "stats": [],
+      "dep": {
+        "227": 2,
+        "228": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5.5
+      },
+      "id": 233
+    },
+    "reorder": {
+      "name_en": "Re-Order",
+      "name_jp": "リオーダー",
+      "desc": "When the user removes their own buffs, there is a chance for the same buffs to be renewed for the user. Does not activate if the buff is timed out, removed by another ally, or negated by a debuff.",
+      "stats": [],
+      "dep": {
+        "233": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 5.5
+      },
+      "id": 234
+    }
+  },
+  "Ninja": {
+    "insolence": {
+      "name_en": "Insolence",
+      "name_jp": "不忍",
+      "desc": "For 3 turns, increases the user's evasion and chance of being targeted.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 235
+    },
+    "ninpoPoisonMist": {
+      "name_en": "Ninpo: Poison Mist",
+      "name_jp": "忍法　毒霧",
+      "desc": "Attempts to inflict poison on all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "235": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 236
+    },
+    "ninpoDaggers": {
+      "name_en": "Ninpo: Daggers",
+      "name_jp": "忍法　含針",
+      "desc": "Deals ranged stab damage to a set number of random targets. Can hit each target once at most. Attempts to inflict sleep.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 237
+    },
+    "ninpoCaltrops": {
+      "name_en": "Ninpo: Caltrops",
+      "name_jp": "忍法　撒菱",
+      "desc": "This turn, when the selected row is attacked, counterattack with ranged slash damage and attempt to inflict poison.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "237": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 238
+    },
+    "shadowBind": {
+      "name_en": "Shadow Bind",
+      "name_jp": "影縫",
+      "desc": "Deals melee cut damage to one target. Attempts to inflict leg bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 239
+    },
+    "boneCrusher": {
+      "name_en": "Bone Crusher",
+      "name_jp": "骨砕き",
+      "desc": "Deals melee bash damage to one target. Reduces their physical defense.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "239": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 240
+    },
+    "acrobatics": {
+      "name_en": "Acrobatics",
+      "name_jp": "軽業",
+      "desc": "When the user evades an attack, their TP is restored.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 241
+    },
+    "concealment": {
+      "name_en": "Concealment",
+      "name_jp": "潜伏",
+      "desc": "Increases evasion.",
+      "stats": [],
+      "dep": {
+        "241": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 242
+    },
+    "ninpoMirage": {
+      "name_en": "Ninpo: Mirage",
+      "name_jp": "忍法　陽炎",
+      "desc": "Creates a decoy of the user in an empty slot. The decoy has added evasion and chance to be targeted.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 243
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 244
+    },
+    "ninpoMastery": {
+      "name_en": "Ninpo Mastery",
+      "name_jp": "忍びの心得",
+      "desc": "Increases attack. At max level, melee attacks will hit for full damage and can always reach the enemy back row, even when the user is in the back.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 245
+    },
+    "ninpoMirror": {
+      "name_en": "Ninpo: Mirror",
+      "name_jp": "忍法　水鏡",
+      "desc": "Attempts to inflict the ailments and binds present on one enemy to all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "238": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 246
+    },
+    "foxDrop": {
+      "name_en": "Fox Drop",
+      "name_jp": "飯綱",
+      "desc": "Deals melee cut damage to one target. Attempts to inflict petrify.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "240": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 247
+    },
+    "hawkStrike": {
+      "name_en": "Hawk Strike",
+      "name_jp": "鷹乃羽",
+      "desc": "Deals multiple instances of melee cut damage to random targets.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "247": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 248
+    },
+    "selfDestruct": {
+      "name_en": "Self-Destruct",
+      "name_jp": "肉弾",
+      "desc": "Once per battle, when the user is killed by an enemy attack, they will counterattack with ranged fire damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 249
+    },
+    "ninpoClone": {
+      "name_en": "Ninpo: Clone",
+      "name_jp": "忍法　分身",
+      "desc": "Consumes a percentage of the user's HP and TP to create a clone in an empty slot. Force Boost and Force Break are unusable while a clone is active.",
+      "stats": [],
+      "dep": {
+        "249": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 250
+    },
+    "beheading": {
+      "name_en": "Beheading",
+      "name_jp": "首切",
+      "desc": "Normal attacks have a chance to inflict instant death.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "242": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 251
+    },
+    "ninpoFlight": {
+      "name_en": "Ninpo: Flight",
+      "name_jp": "忍法　猿飛",
+      "desc": "This turn, the user has a high chance of evading physical attacks. Each time the user evades an attack, the evasion boost is reduced.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 252
+    },
+    "autoMirage": {
+      "name_en": "Auto-Mirage",
+      "name_jp": "先制陽炎",
+      "desc": "If Ninpo: Mirage is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "243": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 253
+    },
+    "statusAtkUp": {
+      "name_en": "Status ATK Up",
+      "name_jp": "抑制攻撃ブースト",
+      "desc": "Increases the chance of inflicting binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 254
+    },
+    "ninpoShock": {
+      "name_en": "Ninpo: Shock",
+      "name_jp": "忍法　驚忍",
+      "desc": "Attempts to inflict panic on all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "246": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 255
+    },
+    "eyeForAnEye": {
+      "name_en": "Eye for an Eye",
+      "name_jp": "意趣返し",
+      "desc": "If the user evaded an attack on the previous turn, increases chance of inflicting ailments",
+      "stats": [],
+      "dep": {
+        "255": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 5,
+        "y": 1
+      },
+      "id": 256
+    },
+    "schadenfreude": {
+      "name_en": "Schadenfreude",
+      "name_jp": "幸災楽禍",
+      "desc": "Deals melee cut damage to one target. Always hits. If target has an ailment, increases the user's Force.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "248": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 257
+    },
+    "drawingSlice": {
+      "name_en": "Drawing Slice",
+      "name_jp": "多元抜刀",
+      "desc": "Deals multiple instances of melee damage to random targets, based on the number of clones active. All clones will disappear after use.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "250": 2,
+        "257": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 2.5
+      },
+      "id": 258
+    },
+    "ninpoSmoke": {
+      "name_en": "Ninpo: Smoke",
+      "name_jp": "忍法　雲隠",
+      "desc": "Consumes the user's HP to greatly increase their evasion for 3 turns.",
+      "stats": [],
+      "dep": {
+        "252": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 259
+    },
+    "smokePowder": {
+      "name_en": "Smoke Powder",
+      "name_jp": "煙の末",
+      "desc": "Reduces TP cost. Will not reduce cost to 0.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 260
+    }
+  },
+  "Zodiac": {
+    "astrologersAxis": {
+      "name_en": "Astrologer's Axis",
+      "name_jp": "占星時軸",
+      "desc": "For 3 turns, Zodiac attack skills will have increased power, and restore half of their TP cost to the user.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 261
+    },
+    "astralSign": {
+      "name_en": "Astral Sign",
+      "name_jp": "アストロサイン",
+      "desc": "Deals ranged fire+ice+volt damage to all enemies. On this turn, all allies' TP cost will be reduced to 0.",
+      "stats": [
+        "INT"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "261": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 262
+    },
+    "ethericGleam": {
+      "name_en": "Etheric Gleam",
+      "name_jp": "エーテルの輝き",
+      "desc": "For a set number of turns, increases elemental attack for one row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 263
+    },
+    "fireStar": {
+      "name_en": "Fire Star",
+      "name_jp": "炎の星術",
+      "desc": "Deals ranged fire damage to one target, with splash damage.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "263": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 264
+    },
+    "iceStar": {
+      "name_en": "Ice Star",
+      "name_jp": "氷の星術",
+      "desc": "Deals ranged ice damage to one target, with line-piercing effects.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "263": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 265
+    },
+    "voltStar": {
+      "name_en": "Volt Star",
+      "name_jp": "雷の星術",
+      "desc": "Deals ranged volt damage to one row.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "263": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 266
+    },
+    "singularity": {
+      "name_en": "Singularity",
+      "name_jp": "特異点定理",
+      "desc": "Increases damage dealt when hitting weaknesses.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 4.5
+      },
+      "id": 267
+    },
+    "focusEther": {
+      "name_en": "Focus Ether",
+      "name_jp": "エーテル圧縮",
+      "desc": "Until the end of the next turn, Zodiac attack skills will hit only one target, but deal increased damage.",
+      "stats": [],
+      "dep": {
+        "267": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 268
+    },
+    "ethericReturn": {
+      "name_en": "Etheric Return",
+      "name_jp": "リターンエーテル",
+      "desc": "When the user kills an enemy, their TP is restored.",
+      "stats": [],
+      "dep": {
+        "267": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 269
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 270
+    },
+    "horoscope": {
+      "name_en": "Horoscope",
+      "name_jp": "星体観測",
+      "desc": "For a set number of turns, reduces encounter rate.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 271
+    },
+    "etherMastery": {
+      "name_en": "Ether Mastery",
+      "name_jp": "エーテルマスター",
+      "desc": "Increases damage of Zodiac attack skills.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 0
+      },
+      "id": 272
+    },
+    "tpUp": {
+      "name_en": "TP Up",
+      "name_jp": "ＴＰブースト",
+      "desc": "Increases maximum TP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 0
+      },
+      "id": 273
+    },
+    "binaryFire": {
+      "name_en": "Binary Fire",
+      "name_jp": "炎の連星術",
+      "desc": "Deals ranged fire damage to all enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "264": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 274
+    },
+    "binaryIce": {
+      "name_en": "Binary Ice",
+      "name_jp": "氷の連星術",
+      "desc": "Deals ranged ice damage to all enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "265": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 275
+    },
+    "binaryVolt": {
+      "name_en": "Binary Volt",
+      "name_jp": "雷の連星術",
+      "desc": "Deals ranged volt damage to all enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "266": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 276
+    },
+    "restoreEther": {
+      "name_en": "Restore Ether",
+      "name_jp": "レストアエーテル",
+      "desc": "Increases attack based on the number of TP spent on the previous turn. Does not activate if TP spent last turn is too low.",
+      "stats": [],
+      "dep": {
+        "268": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 277
+    },
+    "antiEther": {
+      "name_en": "Anti-Ether",
+      "name_jp": "アンチエーテル",
+      "desc": "Provides a chance to nullify elemental attacks against the user's row.",
+      "stats": [],
+      "dep": {
+        "277": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 278
+    },
+    "darkEther": {
+      "name_en": "Dark Ether",
+      "name_jp": "ダークエーテル",
+      "desc": "This turn, reduces TP usage for one row.",
+      "stats": [],
+      "dep": {
+        "269": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 279
+    },
+    "ethericShoot": {
+      "name_en": "Etheric Shoot",
+      "name_jp": "エーテルシュート",
+      "desc": "Deals ranged, INT-based damage to one enemy with the user's weapon.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "279": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 280
+    },
+    "fireProphecy": {
+      "name_en": "Fire Prophecy",
+      "name_jp": "炎の先見術",
+      "desc": "Prevents fire-elemental attacks from one enemy. If an attack is prevented, increases the user's attack until the end of the next turn.",
+      "stats": [],
+      "dep": {
+        "274": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 281
+    },
+    "iceProphecy": {
+      "name_en": "Ice Prophecy",
+      "name_jp": "氷の先見術",
+      "desc": "Prevents ice-elemental attacks from one enemy. If an attack is prevented, increases the user's attack until the end of the next turn.",
+      "stats": [],
+      "dep": {
+        "275": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 282
+    },
+    "voltProphecy": {
+      "name_en": "Volt Prophecy",
+      "name_jp": "雷の先見術",
+      "desc": "Prevents volt-elemental attacks from one enemy. If an attack is prevented, increases the user's attack until the end of the next turn.",
+      "stats": [],
+      "dep": {
+        "276": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 283
+    },
+    "freeEnergy": {
+      "name_en": "Free Energy",
+      "name_jp": "ＴＰカット",
+      "desc": "Provides a chance to reduce the user's TP usage to 0.",
+      "stats": [],
+      "dep": {
+        "281": 1,
+        "282": 1,
+        "283": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 5,
+        "y": 2
+      },
+      "id": 284
+    },
+    "spreadEther": {
+      "name_en": "Spread Ether",
+      "name_jp": "多段式エーテル",
+      "desc": "Until the end of the next turn, Zodiac attack skills will deal reduced damage, but hit random targets 2-5 times. Meteor will instead hit 6-15 times.",
+      "stats": [],
+      "dep": {
+        "278": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 285
+    },
+    "meteor": {
+      "name_en": "Meteor",
+      "name_jp": "メテオ",
+      "desc": "Deals 2-5 instances of ranged bash damage to random targets.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "271": 3,
+        "280": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 5.5
+      },
+      "id": 286
+    }
+  },
+  "Farmer": {
+    "itemAgain": {
+      "name_en": "Item Again",
+      "name_jp": "アイテムアゲイン",
+      "desc": "For 3 turns, any items used by the user will take effect twice. The second activation will not consume another item.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 287
+    },
+    "finalTrick": {
+      "name_en": "Final Trick",
+      "name_jp": "最後の秘策",
+      "desc": "Fully restores all allies' Force gauges, and any broken Force gauges have a chance to be repaired.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "287": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 288
+    },
+    "sympathyPain": {
+      "name_en": "Sympathy Pain",
+      "name_jp": "怪我の功名",
+      "desc": "Attempts to inflict ailments and binds on the user to all enemies. This will not remove them from the user.",
+      "stats": [
+        "LUC",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 1.5
+      },
+      "id": 289
+    },
+    "strangeSeeds": {
+      "name_en": "Strange Seeds",
+      "name_jp": "不思議な種",
+      "desc": "At the end of this turn, attempts to inflict one of head bind, arm bind and leg bind to all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "289": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 290
+    },
+    "playPossum": {
+      "name_en": "Play Possum",
+      "name_jp": "鳴かずば討たれず",
+      "desc": "For 3 turns, decreases one ally's chance of being targeted.",
+      "stats": [],
+      "dep": {
+        "289": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 291
+    },
+    "keenEye": {
+      "name_en": "Keen Eye",
+      "name_jp": "探知マスター",
+      "desc": "For a set number of steps, displays treasure chests, hidden passages, staircases, FOEs and gather points on the minimap.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 292
+    },
+    "searchSkill": {
+      "name_en": "Search Skill",
+      "name_jp": "探索術",
+      "desc": "During exploration, provides a chance to receive gatherable items when walking.",
+      "stats": [],
+      "dep": {
+        "292": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 293
+    },
+    "flee": {
+      "name_en": "Flee",
+      "name_jp": "猛進逃走",
+      "desc": "Consumes HP from all party members to attempt to flee the battle and return to the last used staircase or geomagnetic pole. Does not consume HP if fleeing failed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 294
+    },
+    "slapAwake": {
+      "name_en": "Slap Awake",
+      "name_jp": "応急蘇生",
+      "desc": "Revives one ally. Can only be used in the field.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 295
+    },
+    "harvestry": {
+      "name_en": "Harvestry",
+      "name_jp": "収穫マスター",
+      "desc": "Occasionally gains more items when using any gathering points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 296
+    },
+    "earthsBounty": {
+      "name_en": "Earth's Bounty",
+      "name_jp": "大自然の恵み",
+      "desc": "Increases experience gain for all party members while the user is alive.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 297
+    },
+    "rottenEggs": {
+      "name_en": "Rotten Eggs",
+      "name_jp": "弱り目に祟り目",
+      "desc": "For 3 turns, decreases attack for all enemies. Effect is stronger against enemies with an ailment.",
+      "stats": [],
+      "dep": {
+        "290": 3,
+        "291": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1.5
+      },
+      "id": 298
+    },
+    "persistence": {
+      "name_en": "Persistence",
+      "name_jp": "五分の魂",
+      "desc": "At the end of the turn, the user has a chance of automatically reviving.",
+      "stats": [],
+      "dep": {
+        "298": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 1.5
+      },
+      "id": 299
+    },
+    "wasteNot": {
+      "name_en": "Waste Not",
+      "name_jp": "解体マスター",
+      "desc": "Increases item drop rate.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 2.5
+      },
+      "id": 300
+    },
+    "strokeOfLuck": {
+      "name_en": "Stroke of Luck",
+      "name_jp": "もっけの幸い",
+      "desc": "During exploration, provides a chance to receive consumable items when walking.",
+      "stats": [],
+      "dep": {
+        "293": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 301
+    },
+    "rainOrShin": {
+      "name_en": "Rain or Shine",
+      "name_jp": "アメニモマケズ",
+      "desc": "For a set number of steps, nullifies damage tiles and muddy floors, and greatly reduces other sources of damage while exploring.",
+      "stats": [],
+      "dep": {
+        "294": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 302
+    },
+    "safeStroll": {
+      "name_en": "Safe Stroll",
+      "name_jp": "安全歩行",
+      "desc": "For a set number of steps, reduces encounter rate.",
+      "stats": [],
+      "dep": {
+        "302": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 303
+    },
+    "sharingIsCaring": {
+      "name_en": "Sharing is Caring",
+      "name_jp": "御裾分け",
+      "desc": "Consumes the user's TP to restore TP to other allies on the same row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 304
+    },
+    "braveHeart": {
+      "name_en": "Brave Heart",
+      "name_jp": "怖いもの知らず",
+      "desc": "If the user is in the front row and at full HP, their TP is restored at the end of the turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 305
+    },
+    "survivalSkills": {
+      "name_en": "Survival Skills",
+      "name_jp": "生存の知恵",
+      "desc": "Restores HP and TP to all party members when gathering.",
+      "stats": [],
+      "dep": {
+        "297": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 306
+    },
+    "lullaby": {
+      "name_en": "Lullaby",
+      "name_jp": "子守唄",
+      "desc": "Inflicts sleep on the user and attempts to inflict sleep on all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "299": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1.5
+      },
+      "id": 307
+    },
+    "songOfLabour": {
+      "name_en": "Song of Labour",
+      "name_jp": "労作歌",
+      "desc": "During exploration, restores TP to all allies every set number of steps taken.",
+      "stats": [],
+      "dep": {
+        "307": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 1.5
+      },
+      "id": 308
+    },
+    "dissection": {
+      "name_en": "Dissection",
+      "name_jp": "解体の恩恵",
+      "desc": "When the user kills an enemy, restores Force to all party members.",
+      "stats": [],
+      "dep": {
+        "300": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2.5
+      },
+      "id": 309
+    },
+    "harvestFestival": {
+      "name_en": "Harvest Festival",
+      "name_jp": "収穫祭",
+      "desc": "Deals melee cut damage to all enemies. Increases damage dealt and attempts to inflict instant death on enemy with binds.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 3.5
+      },
+      "id": 310
+    },
+    "naturesBounty": {
+      "name_en": "Nature's Bounty",
+      "name_jp": "自然の恩恵",
+      "desc": "There is a chance to obtain additional rare items when gathering.",
+      "stats": [],
+      "dep": {
+        "306": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 311
+    },
+    "doubleChop": {
+      "name_en": "Double Chop",
+      "name_jp": "二毛作",
+      "desc": "When gathering, there is a chance to immediately gather again from the same spot. Can only activate once per gather.",
+      "stats": [],
+      "dep": {
+        "311": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 6
+      },
+      "id": 312
+    }
+  },
+  "Shogun": {
+    "fullCombatForm": {
+      "name_en": "Full Combat Form",
+      "name_jp": "力戦陣形",
+      "desc": "For 3 turns, increases maximum HP and attack for all party members.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 313
+    },
+    "bodyDouble": {
+      "name_en": "Body Double",
+      "name_jp": "影武者",
+      "desc": "This turn, all party members will negate any hostile action once.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "313": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 314
+    },
+    "parryingBlade": {
+      "name_en": "Parrying Blade",
+      "name_jp": "払い弐刀",
+      "desc": "Increases physical defense when two weapons are equipped. Enables sub-weapon when this skill is learned.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 315
+    },
+    "spiritFlow": {
+      "name_en": "Spirit Flow",
+      "name_jp": "谺流し",
+      "desc": "Deals melee damage to one target with the equipped katana at the start of turn. If two weapons are equipped, attacks again with the other weapon after the target acts.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "315": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 316
+    },
+    "counterCommand": {
+      "name_en": "Counter Command",
+      "name_jp": "斬月居合陣",
+      "desc": "This turn, when the selected ally is attacked, all front row allies will counterattack with their weapons. Does not activate against counterattacks.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 317
+    },
+    "boltSlash": {
+      "name_en": "Bolt Slash",
+      "name_jp": "雷切",
+      "desc": "Deals melee cut+volt damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 318
+    },
+    "sight": {
+      "name_en": "Sight",
+      "name_jp": "無明の極",
+      "desc": "Increases the user's attack at night or when blinded.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 319
+    },
+    "greatGeneral": {
+      "name_en": "Great General",
+      "name_jp": "大武辺者",
+      "desc": "For 3 turns, increases one ally's physical attack and chance of being targeted.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 320
+    },
+    "assassinGathering": {
+      "name_en": "Assassin Gathering",
+      "name_jp": "刺客寄せ",
+      "desc": "For a set number of steps, increases encounter rate and experience gained from defeating enemies.",
+      "stats": [],
+      "dep": {
+        "320": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 321
+    },
+    "take": {
+      "name_en": "Take",
+      "name_jp": "採取",
+      "desc": "Occasionally gains more items when using Take points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 322
+    },
+    "moraleBoost": {
+      "name_en": "Morale Boost",
+      "name_jp": "士気回復",
+      "desc": "When the user is revived, restores HP to all allies.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 323
+    },
+    "twinSparrow": {
+      "name_en": "Twin Sparrow",
+      "name_jp": "双燕",
+      "desc": "Deals melee damage to one target with the user's weapon. If two weapons are equipped, this skill will hit twice. First hit will be from the katana, while the second hit will be from the other weapon.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "316": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 324
+    },
+    "baitCommand": {
+      "name_en": "Bait Command",
+      "name_jp": "据え虎の陣",
+      "desc": "This turn, when the user is attacked, all allies other than the user will counterattack with their weapons. Does not activate against counterattacks.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "317": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 325
+    },
+    "blitzCommand": {
+      "name_en": "Blitz Command",
+      "name_jp": "乱れ竜の陣",
+      "desc": "All allies other than the user will attack one target with their weapons.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "325": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 326
+    },
+    "morningStar": {
+      "name_en": "Morning Star",
+      "name_jp": "明星",
+      "desc": "Deals melee cut damage to one row. Damage increases during the day.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "318": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 327
+    },
+    "dusk": {
+      "name_en": "Dusk",
+      "name_jp": "禍時",
+      "desc": "Deals melee cut damage to one target. Damage increases at night.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "319": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 328
+    },
+    "bloodyLance": {
+      "name_en": "Bloody Lance",
+      "name_jp": "血染めの朱槍",
+      "desc": "When the user kills an enemy or ally, their attack is increased. The effect is reset when the user dies.",
+      "stats": [],
+      "dep": {
+        "328": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 329
+    },
+    "reincarnation": {
+      "name_en": "Reincarnation",
+      "name_jp": "仮死再生",
+      "desc": "On the turn when the user's HP reaches 0, there is a chance that they may revive at the end of that turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 330
+    },
+    "fellingBird": {
+      "name_en": "Felling Bird",
+      "name_jp": "飛鳥落とし",
+      "desc": "Increases damage dealt based on the number of attacks user made last turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 331
+    },
+    "ritualSuicide": {
+      "name_en": "Ritual Suicide",
+      "name_jp": "切腹",
+      "desc": "Restores HP to all other allies with a chance to revive them, but the user dies. This self-inflicted death cannot be prevented via any means.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 332
+    },
+    "fiveRingSword": {
+      "name_en": "Five-Ring Sword",
+      "name_jp": "五輪の剣",
+      "desc": "Deals multiple instances of melee damage to random targets with user's weapon. If two weapons are equipped, the maximum number of hits will double, and this attack will alternate between the katana and the other weapon.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "324": 4
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 333
+    },
+    "reprisalCommand": {
+      "name_en": "Reprisal Command",
+      "name_jp": "報復射撃陣",
+      "desc": "This turn, when the selected row is attacked, all allies equipped with a bow or gun will counterattack with their bow or gun. Does not activate against counterattacks.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "326": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 334
+    },
+    "warriorMight": {
+      "name_en": "Warrior Might",
+      "name_jp": "一騎当千",
+      "desc": "This turn, the user will chase all attacks from all allies, but will lose HP for every chase. The HP loss can kill the user. Links, chases and counterattacks cannot be chased. Only one chase will be made for each action.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "334": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 2
+      },
+      "id": 335
+    },
+    "curseStrike": {
+      "name_en": "Curse Strike",
+      "name_jp": "祟り打ち",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict curse and arm bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "329": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 336
+    },
+    "mercyKill": {
+      "name_en": "Mercy Kill",
+      "name_jp": "介錯",
+      "desc": "When any enemy or ally is attacked, and their HP falls below a set percentage, there is a chance to inflict instant death to them.",
+      "stats": [],
+      "dep": {
+        "336": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 4
+      },
+      "id": 337
+    },
+    "foreHonor": {
+      "name_en": "Fore Honor",
+      "name_jp": "先陣の名誉",
+      "desc": "For 3 turns, increases one ally's physical attack and action speed, but decreases their physical defense.",
+      "stats": [],
+      "dep": {
+        "330": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 338
+    }
+  },
+  "Landsknecht": {
+    "trinity": {
+      "name_en": "Trinity",
+      "name_jp": "三位一体",
+      "desc": "For 3 turns, increases the user's attack, accuracy and action speed.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 339
+    },
+    "fullCharge": {
+      "name_en": "Full Charge",
+      "name_jp": "フルチャージ",
+      "desc": "This turn, the user is fully immune to any hostile effects from enemies. Until the end of the next turn, increases the user's attack and action speed.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "339": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 340
+    },
+    "proficiency": {
+      "name_en": "Proficiency",
+      "name_jp": "剣士の心得",
+      "desc": "After the user attacks this turn, all further attacks against enemies attacked by the user will have increased damage and accuracy.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 341
+    },
+    "sonicRaid": {
+      "name_en": "Sonic Raid",
+      "name_jp": "ソニックレイド",
+      "desc": "Deals melee damage to one target with the user's weapon at the start of the turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 342
+    },
+    "blazingLink": {
+      "name_en": "Blazing Link",
+      "name_jp": "リンクフレイム",
+      "desc": "Deals melee cut/stab+fire damage to one target. If the target is attacked again after, follows up with another attack of the same element. Chance of follow-up decreases with each hit.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 343
+    },
+    "freezingLink": {
+      "name_en": "Freezing Link",
+      "name_jp": "リンクフリーズ",
+      "desc": "Deals melee cut/stab+ice damage to one target. If the target is attacked again after, follows up with another attack of the same element. Chance of follow-up decreases with each hit.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 344
+    },
+    "electricLink": {
+      "name_en": "Electric Link",
+      "name_jp": "リンクサンダー",
+      "desc": "Deals melee cut/stab+volt damage to one target. If the target is attacked again after, follows up with another attack of the same element. Chance of follow-up decreases with each hit.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 345
+    },
+    "vanguard": {
+      "name_en": "Vanguard",
+      "name_jp": "ヴァンガード",
+      "desc": "For 5 turns, decreases the user's physical defense, but increases physical attack and action speed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 346
+    },
+    "powerBreak": {
+      "name_en": "Power Break",
+      "name_jp": "パワーブレイク",
+      "desc": "Deals melee bash damage to one target. Decreases their attack for 3 turns. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 347
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 348
+    },
+    "physDefUp": {
+      "name_en": "Phys DEF Up",
+      "name_jp": "物理防御ブースト",
+      "desc": "Increases physical defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 349
+    },
+    "doubleStrike": {
+      "name_en": "Double Strike",
+      "name_jp": "ダブルストライク",
+      "desc": "Deals 2 instances of melee damage to one target with the user's weapon.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "342": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 350
+    },
+    "spiralSlice": {
+      "name_en": "Spiral Slice",
+      "name_jp": "ラウンドソード",
+      "desc": "Deals melee cut damage to one target, with splash damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "350": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 0.5
+      },
+      "id": 351
+    },
+    "penetrate": {
+      "name_en": "Penetrate",
+      "name_jp": "ペネトレイト",
+      "desc": "Deals melee stab damage to one target, with line-piercing effects.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "350": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 1.5
+      },
+      "id": 352
+    },
+    "improvedLink": {
+      "name_en": "Improved Link",
+      "name_jp": "リンクプラス",
+      "desc": "For 3 turns, increases the number of follow-ups that can be made from link skills used by the user, as well as their chance of follow-up. Each action may trigger at most 4 link follow-ups.",
+      "stats": [],
+      "dep": {
+        "343": 3,
+        "344": 3,
+        "345": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 353
+    },
+    "linkSmash": {
+      "name_en": "Link Smash",
+      "name_jp": "リンクスマッシュ",
+      "desc": "Link follow-up attacks can deal critical hits. If an action triggered multiple follow-ups and one of them dealt a critical hit, all subsequent follow-ups triggered by that action will automatically deal critical hits as well.",
+      "stats": [],
+      "dep": {
+        "353": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 354
+    },
+    "guardBreak": {
+      "name_en": "Guard Break",
+      "name_jp": "ガードブレイク",
+      "desc": "Deals melee bash damage to one target. Decreases their defense for 3 turns. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "347": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 355
+    },
+    "speedBreak": {
+      "name_en": "Speed Break",
+      "name_jp": "スピードブレイク",
+      "desc": "Deals melee bash damage to one target. Decreases their evasion and action speed for 3 turns. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "355": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 356
+    },
+    "initiative": {
+      "name_en": "Initiative",
+      "name_jp": "先駆けの功名",
+      "desc": "When attacking before any enemies act, increases damage and accuracy.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 357
+    },
+    "statusDefUp": {
+      "name_en": "Status DEF Up",
+      "name_jp": "抑制防御ブースト",
+      "desc": "Decreases the chance of being inflicted with binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 358
+    },
+    "swordTempest": {
+      "name_en": "Sword Tempest",
+      "name_jp": "ソードテンペスト",
+      "desc": "Deals melee cut damage to one target. High power at the cost of speed.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "351": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 0.5
+      },
+      "id": 359
+    },
+    "swiftStab": {
+      "name_en": "Swift Stab",
+      "name_jp": "ハヤブサ突き",
+      "desc": "Deals multiple instances of melee stab damage to random targets.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "352": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 1.5
+      },
+      "id": 360
+    },
+    "linkMastery": {
+      "name_en": "Link Mastery",
+      "name_jp": "リンクマスタリ",
+      "desc": "For each link follow-up made this turn, increases the damage of subsquent link follow-ups.",
+      "stats": [],
+      "dep": {
+        "354": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 361
+    },
+    "linkEnd": {
+      "name_en": "Link End",
+      "name_jp": "リンクエンド",
+      "desc": "Deals melee damage to one target with the user's weapon. Damage is based on the number of link follow-ups made on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "361": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 5,
+        "y": 3
+      },
+      "id": 362
+    },
+    "fullBreak": {
+      "name_en": "Full Break",
+      "name_jp": "フルブレイク",
+      "desc": "Deals melee bash damage to one target. Damage is increased if the target has a Break skill debuff. Multiple Break debuffs will not increase damage further. Damage is based on the user's shield's DEF.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "356": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 363
+    },
+    "singleDevote": {
+      "name_en": "Single Devote",
+      "name_jp": "シングルデボート",
+      "desc": "Increases damage when fewer elements are used in an attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 364
+    }
+  },
+  "Nightseeker": {
+    "killerStance": {
+      "name_en": "Killer Stance",
+      "name_jp": "キラースタンス",
+      "desc": "For 3 turns, increases attack and ailment infliction chance for the user.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 365
+    },
+    "disaster": {
+      "name_en": "Disaster",
+      "name_jp": "ディザスター",
+      "desc": "Deals melee cut damage to one target. If the target has an ailment, increases the ailment's duration.",
+      "stats": [
+        "STR"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "365": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 366
+    },
+    "sandThrow": {
+      "name_en": "Sand Throw",
+      "name_jp": "盲目の投刃",
+      "desc": "Deals ranged cut damage to one target. Attempts to inflict blind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 1.5
+      },
+      "id": 367
+    },
+    "sleepThrow": {
+      "name_en": "Sleep Throw",
+      "name_jp": "睡眠の投刃",
+      "desc": "Deals ranged cut damage to one target. Attempts to inflict sleep.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "367": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 368
+    },
+    "shadowCloak": {
+      "name_en": "Shadow Cloak",
+      "name_jp": "ハイドクローク",
+      "desc": "For 3 turns, negates one physical attack made against the user.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 369
+    },
+    "bidingSlice": {
+      "name_en": "Biding Slice",
+      "name_jp": "ディレスタブ",
+      "desc": "Deals melee cut damage to one target. If the user is not damaged until the end of the turn, deals melee cut damage to the same target again.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "369": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 370
+    },
+    "iceKnife": {
+      "name_en": "Ice Knife",
+      "name_jp": "アイスブラッシュ",
+      "desc": "Deals cut+ice damage to one target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 371
+    },
+    "proficiency": {
+      "name_en": "Proficiency",
+      "name_jp": "夜賊の心得",
+      "desc": "Increases damage dealt to enemies with ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 372
+    },
+    "decoySign": {
+      "name_en": "Decoy Sign",
+      "name_jp": "デコイサイン",
+      "desc": "For 3 turns, increases one ally's chance of being targeted.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 373
+    },
+    "bladeFlurry": {
+      "name_en": "Blade Flurry",
+      "name_jp": "追影の刃",
+      "desc": "User can attack with both weapons if two weapons are equipped. Damage of the second attack is based on this skill's level. Enables sub-weapon when this skill is learned.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 374
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 375
+    },
+    "curseThrow": {
+      "name_en": "Curse Throw",
+      "name_jp": "呪いの投刃",
+      "desc": "Deals ranged cut damage to one target. Attempts to inflict curse.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "368": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 376
+    },
+    "nerveThrow": {
+      "name_en": "Nerve Throw",
+      "name_jp": "麻痺の投刃",
+      "desc": "Deals ranged cut damage to one target. Attempts to inflict paralysis.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "376": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 377
+    },
+    "shadowBite": {
+      "name_en": "Shadow Bite",
+      "name_jp": "シャドウバイト",
+      "desc": "Deals melee cut damage to one target. Damage is increased if the target has an ailment.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "368": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 378
+    },
+    "autoCloak": {
+      "name_en": "Auto-Cloak",
+      "name_jp": "先制クローク",
+      "desc": "If Shadow Cloak is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "370": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 379
+    },
+    "backstab": {
+      "name_en": "Backstab",
+      "name_jp": "バックスタブ",
+      "desc": "Deals melee cut damage to one target. Attempts to inflict head bind. If the user has Shadow Cloak, add almighty element to the attack and increases damage.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "379": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 380
+    },
+    "sneakAttack": {
+      "name_en": "Sneak Attack",
+      "name_jp": "奇襲",
+      "desc": "For a set number of steps, increases the chance of preemptive attacks.",
+      "stats": [],
+      "dep": {
+        "372": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 381
+    },
+    "foulMastery": {
+      "name_en": "Foul Mastery",
+      "name_jp": "闇討マスタリ",
+      "desc": "Increases attack every time the user inflicts an ailment. Bonus stacks up to 3 times, and is reset if the user dies.",
+      "stats": [],
+      "dep": {
+        "381": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 382
+    },
+    "speedUp": {
+      "name_en": "Speed Up",
+      "name_jp": "素早さブースト",
+      "desc": "Increases accuracy, evasion and action speed.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 383
+    },
+    "spreadThrow": {
+      "name_en": "Spread Throw",
+      "name_jp": "スプレッドスロー",
+      "desc": "Until the end of the next turn, increases throw skills' range to all targets, and improves their infliction rate.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 384
+    },
+    "venomThrow": {
+      "name_en": "Venom Throw",
+      "name_jp": "猛毒の投刃",
+      "desc": "Deals ranged cut damage to one target. Attempts to inflict poison.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "377": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 385
+    },
+    "swiftEdge": {
+      "name_en": "Swift Edge",
+      "name_jp": "スウィフトソード",
+      "desc": "Deals 3-5 instances of melee cut damage to one target. If the target has an ailment, maximum number of attacks is increased to 9.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "378": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 386
+    },
+    "assassinate": {
+      "name_en": "Assassinate",
+      "name_jp": "アサシネイション",
+      "desc": "Deals melee cut damage to one target. If the user has Shadow Cloak, attempts to inflict instant death.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "380": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 387
+    },
+    "returnCloak": {
+      "name_en": "Return Cloak",
+      "name_jp": "リターンクローク",
+      "desc": "When Shadow Cloak negates an attack, there is a chance that Shadow Cloak will be automatically cast on the user.",
+      "stats": [],
+      "dep": {
+        "387": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 5,
+        "y": 3
+      },
+      "id": 388
+    },
+    "followTrace": {
+      "name_en": "Follow Trace",
+      "name_jp": "追影の残滓",
+      "desc": "After using an attack skill, if at least one of the skill's targets has an ailment, there is a chance to repeat the skill.",
+      "stats": [],
+      "dep": {
+        "374": 4
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 389
+    },
+    "autoSpread": {
+      "name_en": "Auto-Spread",
+      "name_jp": "先制スプレッド",
+      "desc": "If Spread Throw is learned, there is a chance to automatically cast it at the start of battle. Cannot activate if another ally activated it first.",
+      "stats": [],
+      "dep": {
+        "384": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 390
+    }
+  },
+  "Arcanist": {
+    "circleProtection": {
+      "name_en": "Circle Protection",
+      "name_jp": "方陣護持",
+      "desc": "For 3 turns, increases the user's bind and ailment infliction chance, and prevents circles from being removed.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 391
+    },
+    "releasalSpell": {
+      "name_en": "Releasal Spell",
+      "name_jp": "解魔の札",
+      "desc": "Remove buffs and accumulative resistance from all enemies.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "391": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 392
+    },
+    "circleBoon": {
+      "name_en": "Circle Boon",
+      "name_jp": "陣回復",
+      "desc": "If a circle is active, restores HP to all party members at the end of the turn.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 393
+    },
+    "dismissHeal": {
+      "name_en": "Dismiss Heal",
+      "name_jp": "破陣：命脈活性",
+      "desc": "Dismisses the current circle and restores HP to all party members.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "393": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1
+      },
+      "id": 394
+    },
+    "chainCircle": {
+      "name_en": "Chain Circle",
+      "name_jp": "腕封の方陣",
+      "desc": "Activates a circle that attempts to inflict arm bind on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 395
+    },
+    "snareCircle": {
+      "name_en": "Snare Circle",
+      "name_jp": "脚封の方陣",
+      "desc": "Activates a circle that attempts to inflict leg bind on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "395": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 396
+    },
+    "nerveCircle": {
+      "name_en": "Nerve Circle",
+      "name_jp": "麻痺の方陣",
+      "desc": "Activates a circle that attempts to inflict paralysis on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 397
+    },
+    "curseCircle": {
+      "name_en": "Curse Circle",
+      "name_jp": "呪いの方陣",
+      "desc": "Activates a circle that attempts to inflict curse on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "397": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 398
+    },
+    "bracingWalk": {
+      "name_en": "Bracing Walk",
+      "name_jp": "回復歩行",
+      "desc": "During exploration, restores HP to all allies for every 3 steps taken.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 399
+    },
+    "proficiency": {
+      "name_en": "Proficiency",
+      "name_jp": "方陣師の心得",
+      "desc": "Restores TP to the user when a circle is dismissed or times out.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 400
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 401
+    },
+    "dismissRevive": {
+      "name_en": "Dismiss Revive",
+      "name_jp": "破陣：再起活性",
+      "desc": "Dismisses the current circle to attempt to revive one row of allies.",
+      "stats": [],
+      "dep": {
+        "394": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 402
+    },
+    "dismissBlow": {
+      "name_en": "Dismiss Blow",
+      "name_jp": "破陣：亜空絞破",
+      "desc": "Dismisses the current circle to deal ranged almighty damage to one target.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "402": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 403
+    },
+    "hoodCircle": {
+      "name_en": "Hood Circle",
+      "name_jp": "頭封の方陣",
+      "desc": "Activates a circle that attempts to inflict head bind on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "396": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 404
+    },
+    "sleepCircle": {
+      "name_en": "Sleep Circle",
+      "name_jp": "催眠の方陣",
+      "desc": "Activates a circle that attempts to inflict sleep on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "398": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 405
+    },
+    "charmEye": {
+      "name_en": "Charm Eye",
+      "name_jp": "魅了の邪眼",
+      "desc": "For 3 turns, decreases attack for all enemies.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 406
+    },
+    "atrophicEye": {
+      "name_en": "Atrophic Eye",
+      "name_jp": "衰身の邪眼",
+      "desc": "For 3 turns, decreases defense for all enemies.",
+      "stats": [],
+      "dep": {
+        "406": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 407
+    },
+    "statusAtkUp": {
+      "name_en": "Status ATK Up",
+      "name_jp": "抑制攻撃ブースト",
+      "desc": "Increases the chance of inflicting binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 408
+    },
+    "tameGround": {
+      "name_en": "Tame Ground",
+      "name_jp": "地脈操作",
+      "desc": "For a set number of steps, nullifies damage tiles and muddy floors, and greatly reduces other sources of damage while exploring.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 409
+    },
+    "wardingMist": {
+      "name_en": "Warding Mist",
+      "name_jp": "退魔の霧",
+      "desc": "Provides a chance to nullify binds, ailments and stun for the user's row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 410
+    },
+    "dismissBlast": {
+      "name_en": "Dismiss Blast",
+      "name_jp": "破陣：亜空鳴動",
+      "desc": "Dismisses the current circle to deal ranged almighty damage to all enemies.",
+      "stats": [
+        "INT"
+      ],
+      "dep": {
+        "403": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 411
+    },
+    "circleMastery": {
+      "name_en": "Circle Mastery",
+      "name_jp": "方陣マスタリ",
+      "desc": "Increases the power of Dismiss skills.",
+      "stats": [],
+      "dep": {
+        "411": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 5,
+        "y": 1
+      },
+      "id": 412
+    },
+    "poisonCircle": {
+      "name_en": "Poison Circle",
+      "name_jp": "毒の方陣",
+      "desc": "Activates a circle that attempts to inflict poison on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "405": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 2.5
+      },
+      "id": 413
+    },
+    "chaosCircle": {
+      "name_en": "Chaos Circle",
+      "name_jp": "幻惑の方陣",
+      "desc": "Activates a circle that attempts to inflict panic on all enemies at the end of each turn for 3 turns. Existing circle will be overwritten, and the circle is removed if the user dies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "405": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 3.5
+      },
+      "id": 414
+    },
+    "dismissTremor": {
+      "name_en": "Dismiss Tremor",
+      "name_jp": "破陣：大地振盪",
+      "desc": "Dismisses the current circle to attempt to inflict stun on all enemies.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "413": 3,
+        "414": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 3
+      },
+      "id": 415
+    },
+    "tpReturn": {
+      "name_en": "TP Return",
+      "name_jp": "ＴＰリターン",
+      "desc": "Restores TP to the user when they inflict a bind, ailment or stun. Inflicting something on multiple enemies will not increase the effect of this skill.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 416
+    }
+  },
+  "Imperial": {
+    "ignition": {
+      "name_en": "Ignition",
+      "name_jp": "イグニッション",
+      "desc": "For 3 turns, the user's drive skills will not activate the overheat state.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 417
+    },
+    "conversion": {
+      "name_en": "Conversion",
+      "name_jp": "コンバージョン",
+      "desc": "Restores TP to the user. This can restore TP over maximum TP. The overhealed TP will disappear at the end of battle, or when the user dies.",
+      "stats": [],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "417": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 418
+    },
+    "sharpEdge": {
+      "name_en": "Sharp Edge",
+      "name_jp": "シャープエッジ",
+      "desc": "Activation skill. Deals melee cut damage to one target. Reduces overheat duration by 1 turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 419
+    },
+    "naturalEdge": {
+      "name_en": "Natural Edge",
+      "name_jp": "ナチュラルエッジ",
+      "desc": "Activation skill. Deals melee damage to one target with the user's weapon.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 420
+    },
+    "bloodEdge": {
+      "name_en": "Blood Edge",
+      "name_jp": "ブラッドエッジ",
+      "desc": "Connecting skill. Deals melee cut damage to one target. Restores HP to the user based on the amount of damage dealt. Can only be used if an activation skill was used on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "419": 2,
+        "420": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 421
+    },
+    "rearGuard": {
+      "name_en": "Rear Guard",
+      "name_jp": "リアガード",
+      "desc": "For 3 turns, increases defense for one ally, but that ally will move last each turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 422
+    },
+    "assaultDrive": {
+      "name_en": "Assault Drive",
+      "name_jp": "アサルトドライブ",
+      "desc": "Deals melee cut damage to one target, and places the user in the overheat state for 7 turns. Cannot be used while overheated. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 423
+    },
+    "heatSink": {
+      "name_en": "Heat Sink",
+      "name_jp": "強制排熱",
+      "desc": "Reduces overheat duration by a set number of turns. Can only be used while overheated.",
+      "stats": [],
+      "dep": {
+        "423": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3.5
+      },
+      "id": 424
+    },
+    "overheatGuard": {
+      "name_en": "Overheat Guard",
+      "name_jp": "過熱の守り",
+      "desc": "While overheated, increases the user's defense.",
+      "stats": [],
+      "dep": {
+        "423": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 4.5
+      },
+      "id": 425
+    },
+    "avenger": {
+      "name_en": "Avenger",
+      "name_jp": "アベンジャー",
+      "desc": "When an ally dies, restores HP to the user.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 426
+    },
+    "mine": {
+      "name_en": "Mine",
+      "name_jp": "採掘",
+      "desc": "Occasionally gains more items when using Mine points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 427
+    },
+    "massiveEdge": {
+      "name_en": "Massive Edge",
+      "name_jp": "マッシブエッジ",
+      "desc": "Activation skill. Deals melee cut damage to one target, with splash damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "421": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 428
+    },
+    "coolEdge": {
+      "name_en": "Cool Edge",
+      "name_jp": "クールエッジ",
+      "desc": "Connecting skill. Deals melee cut damage to one target. Reduces duration of overheat by 2 turns. Can only be used if an activation skill was used on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "428": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 429
+    },
+    "tripEdge": {
+      "name_en": "Trip Edge",
+      "name_jp": "トリップエッジ",
+      "desc": "Activation skill. Deals melee cut damage to one target. Attempts to inflict leg bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "421": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 2
+      },
+      "id": 430
+    },
+    "impulseEdge": {
+      "name_en": "Impulse Edge",
+      "name_jp": "インパルスエッジ",
+      "desc": "Connecting skill. Deals melee cut damage to one target. Restores TP to the user. Can only be used if an activation skill was used on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "430": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 2
+      },
+      "id": 431
+    },
+    "intercooler": {
+      "name_en": "Intercooler",
+      "name_jp": "インタークーラー",
+      "desc": "Increases the damage of Drive skills. Increasing this skill's level will also reduce the duration of the overheat state.",
+      "stats": [],
+      "dep": {
+        "424": 1,
+        "425": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 432
+    },
+    "flameDrive": {
+      "name_en": "Flame Drive",
+      "name_jp": "フレイムドライブ",
+      "desc": "Deals melee cut+fire damage to one target, and places the user in the overheat state for 8 turns. Cannot be used while overheated. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "432": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 433
+    },
+    "freezeDrive": {
+      "name_en": "Freeze Drive",
+      "name_jp": "フリーズドライブ",
+      "desc": "Deals melee cut+ice damage to one target, and places the user in the overheat state for 8 turns. Cannot be used while overheated. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "432": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 4
+      },
+      "id": 434
+    },
+    "shockDrive": {
+      "name_en": "Shock Drive",
+      "name_jp": "ショックドライブ",
+      "desc": "Deals melee cut+volt damage to one target, and places the user in the overheat state for 8 turns. Cannot be used while overheated. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "432": 3
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 435
+    },
+    "statusDefUp": {
+      "name_en": "Status DEF Up",
+      "name_jp": "抑制防御ブースト",
+      "desc": "Decreases the chance of being inflicted with binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 436
+    },
+    "chargeEdge": {
+      "name_en": "Charge Edge",
+      "name_jp": "チャージエッジ",
+      "desc": "Terminating skill. Deals melee cut damage to one target. Until the end of the next turn, increases the user's attack. Can only be used if an activation skill or connecting skill was used on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "429": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 437
+    },
+    "forceEdge": {
+      "name_en": "Force Edge",
+      "name_jp": "フォースエッジ",
+      "desc": "Terminating skill. Deals melee cut damage to one target. Restores Force to the user. Can only be used if an activation skill or connecting skill was used on the previous turn.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "431": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 438
+    },
+    "hpUp": {
+      "name_en": "HP Up",
+      "name_jp": "ＨＰブースト",
+      "desc": "Increases maximum HP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 439
+    },
+    "accelDrive": {
+      "name_en": "Accel Drive",
+      "name_jp": "アクセルドライブ",
+      "desc": "Deals melee cut+almighty damage to one target, and places the user in the overheat state for 9 turns. Cannot be used while overheated. Low action speed, and the user will take double damage until the skill activates.",
+      "stats": [
+        "STR"
+      ],
+      "weapon": [
+        "Drive Blade"
+      ],
+      "bodyParts": [
+        "Arms"
+      ],
+      "dep": {
+        "433": 1,
+        "434": 1,
+        "435": 1
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 4
+      },
+      "id": 440
+    },
+    "absorber": {
+      "name_en": "Absorber",
+      "name_jp": "コンバーター",
+      "desc": "Restores TP to the user when hitting a weakness.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 5
+      },
+      "id": 441
+    },
+    "elemAtkUp": {
+      "name_en": "Elem ATK Up",
+      "name_jp": "属性攻撃ブースト",
+      "desc": "Increases elemental attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 442
+    }
+  },
+  "Pugilist": {
+    "sealRush": {
+      "name_en": "Seal Rush",
+      "name_jp": "シールラッシュ",
+      "desc": "For 3 turns, increases the user's bind infliction chance, and chases any of the user's attacks against an enemy with binds, ailments or stun. Multi-hit attacks will only be chased once.",
+      "stats": [],
+      "unique": true,
+      "type": "Boost",
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 443
+    },
+    "finalBlow": {
+      "name_en": "Final Blow",
+      "name_jp": "ファイナルブロー",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict head bind, arm bind and leg bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "unique": true,
+      "type": "Break",
+      "dep": {
+        "443": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 444
+    },
+    "concussion": {
+      "name_en": "Concussion",
+      "name_jp": "フリッカー",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict head bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 445
+    },
+    "armBreaker": {
+      "name_en": "Arm Breaker",
+      "name_jp": "アームブレイク",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict arm bind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 446
+    },
+    "lowBlow": {
+      "name_en": "Low Blow",
+      "name_jp": "リバーブロー",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict leg bind on the target.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 447
+    },
+    "oneTwoPunch": {
+      "name_en": "One-Two Punch",
+      "name_jp": "ワンツー",
+      "desc": "Deals melee bash damage to one target. May follow up with Concussion, Arm Breaker, and Low Blow if the target does not have the respective bind. Follow-up skills deal reduced damage.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "445": 2,
+        "446": 2,
+        "447": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 2
+      },
+      "id": 448
+    },
+    "corkscrew": {
+      "name_en": "Corkscrew",
+      "name_jp": "コークスクリュー",
+      "desc": "Deals melee bash damage to one target. Attempts to inflict paralysis on the target.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 3.5
+      },
+      "id": 449
+    },
+    "adrenaline": {
+      "name_en": "Adrenaline",
+      "name_jp": "アドレナリン",
+      "desc": "Restores TP to the user when they inflict a bind, ailment or stun. Inflicting something on multiple enemies will not increase the effect of this skill.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 4
+      },
+      "id": 450
+    },
+    "doublePunch": {
+      "name_en": "Double Punch",
+      "name_jp": "ダブルパンチ",
+      "desc": "When any single-action, single-target Pugilist skill is used, or when Corkscrew is used via Added Blow, or when Cross Counter is used (despite what the description claims), if the skill fails to inflict their bind or ailment, there is a chance it will be repeated.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 5
+      },
+      "id": 451
+    },
+    "chop": {
+      "name_en": "Chop",
+      "name_jp": "伐採",
+      "desc": "Occasionally gains more items when using Chop points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 452
+    },
+    "hpUp": {
+      "name_en": "HP Up",
+      "name_jp": "ＨＰブースト",
+      "desc": "Increases maximum HP.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 6
+      },
+      "id": 453
+    },
+    "devilsFist": {
+      "name_en": "Devil's Fist",
+      "name_jp": "鬼人拳",
+      "desc": "Consumes HP to deal melee bash damage to one target, with splash damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 1
+      },
+      "id": 454
+    },
+    "fightingSpirit": {
+      "name_en": "Fighting Spirit",
+      "name_jp": "闘魂",
+      "desc": "If the user lost HP on the previous turn, increases their attack this turn.",
+      "stats": [],
+      "dep": {
+        "454": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 1
+      },
+      "id": 455
+    },
+    "addedBlow": {
+      "name_en": "Added Blow",
+      "name_jp": "追い撃ち",
+      "desc": "When the user inflicts a bind on an enemy, there is a chance to follow up with Corkscrew.",
+      "stats": [],
+      "dep": {
+        "448": 2,
+        "449": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 2.75
+      },
+      "id": 456
+    },
+    "leadingBlow": {
+      "name_en": "Leading Blow",
+      "name_jp": "リードブロー",
+      "desc": "Deals melee bash damage to one target. For every bind the target has, follows up with the corresponding Pugilist skill. For any ailment the target has, follows up with Corkscrew.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "456": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 2.75
+      },
+      "id": 457
+    },
+    "breather": {
+      "name_en": "Breather",
+      "name_jp": "インターバル",
+      "desc": "Removes binds and ailment from the user, and increases attack until the end of the next turn. Cannot be used if the user has no binds or ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 458
+    },
+    "faultBlocker": {
+      "name_en": "Fault Blocker",
+      "name_jp": "アームブロック",
+      "desc": "For 3 turns, increases ailment and bind resistance for the user's row.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 459
+    },
+    "clinch": {
+      "name_en": "Clinch",
+      "name_jp": "クリンチ",
+      "desc": "Attempts to inflict head bind, arm bind, and leg bind on both the user and the target.",
+      "stats": [
+        "LUC"
+      ],
+      "dep": {
+        "458": 1,
+        "459": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 4.5
+      },
+      "id": 460
+    },
+    "statusAtkUp": {
+      "name_en": "Status ATK Up",
+      "name_jp": "抑制攻撃ブースト",
+      "desc": "Increases the chance of inflicting binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 461
+    },
+    "crossCounter": {
+      "name_en": "Cross Counter",
+      "name_jp": "クロスカウンター",
+      "desc": "This turn, when a party member on the user's row is attacked, counterattacks with melee bash damage and attempts to inflict the corresponding bind on the target. Does not activate if the counterattack cannot reach the enemy.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 462
+    },
+    "thunderFist": {
+      "name_en": "Thunder Fist",
+      "name_jp": "雷神拳",
+      "desc": "Deals melee bash+volt damage to one target. If the attack does not kill the target, the user takes damage.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "455": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 463
+    },
+    "lashOut": {
+      "name_en": "Lash Out",
+      "name_jp": "ラッシュアウト",
+      "desc": "Deals multiple instances of melee bash damage to one target. The number of hits is equal to the number of hits made on the previous turn. No matter how many attacks Lash Out makes, it will always count as 1 attack for the purpose of this skill.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "457": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 2.75
+      },
+      "id": 464
+    },
+    "meditation": {
+      "name_en": "Meditation",
+      "name_jp": "瞑想",
+      "desc": "Until the end of the next turn, increases user's chance of inflicting binds and ailments.",
+      "stats": [],
+      "dep": {
+        "460": 3
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 4,
+        "y": 4.5
+      },
+      "id": 465
+    },
+    "ragingWaves": {
+      "name_en": "Raging Waves",
+      "name_jp": "怒涛",
+      "desc": "Increases damage dealt based on the number of binds and ailments the target has.",
+      "stats": [],
+      "dep": {
+        "465": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 5,
+        "y": 4.5
+      },
+      "id": 466
+    },
+    "millionLash": {
+      "name_en": "Million Lash",
+      "name_jp": "ミリオンラッシュ",
+      "desc": "Normal attacks may hit 2-4 times if two weapons are equipped. Enables sub-weapon when this skill is learned.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 6
+      },
+      "id": 467
+    },
+    "resonanceBlow": {
+      "name_en": "Resonance Blow",
+      "name_jp": "レゾナンスブロー",
+      "desc": "Deals multiple instances of melee bash damage to one target. The number of hits increases based on the number of turns since Resonance Blow was last used.",
+      "stats": [
+        "STR"
+      ],
+      "dep": {
+        "467": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 5,
+        "y": 6
+      },
+      "id": 468
+    }
+  },
+  "Harbinger": {
+    "infiniteMiasma": {
+      "name_en": "Infinite Miasma",
+      "name_jp": "無限兵装",
+      "desc": "For 3 turns, Miasma Armor's duration will not decrease, and it cannot be removed.",
+      "unique": true,
+      "type": "Boost",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 0,
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "id": 469
+    },
+    "miasmaTorrent": {
+      "name_en": "Miasma Torrent",
+      "name_jp": "瘴気の激流",
+      "desc": "This turn, greatly reduces all enemies' attack, defense, evasion, action speed, and bind/ailment resistance.",
+      "unique": true,
+      "type": "Break",
+      "stats": [],
+      "dep": {
+        "469": 0
+      },
+      "maxLevel": 0,
+      "coords": {
+        "x": 1,
+        "y": 0
+      },
+      "id": 470
+    },
+    "erodingMiasma": {
+      "name_en": "Eroding Miasma",
+      "name_jp": "削弱の瘴気",
+      "desc": "For a set number of turns, decreases all enemies' defense.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 1
+      },
+      "id": 471
+    },
+    "stiflingMiasma": {
+      "name_en": "Stifling Miasma",
+      "name_jp": "繊弱の瘴気",
+      "desc": "For a set number of turns, decreases all enemies' attack.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 0,
+        "y": 2
+      },
+      "id": 472
+    },
+    "slowingMiasma": {
+      "name_en": "Slowing Miasma",
+      "name_jp": "鈍弱の瘴気",
+      "desc": "For a set number of turns, decreases all enemies' evasion and action speed.",
+      "stats": [],
+      "dep": {
+        "471": 2,
+        "472": 2
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 1,
+        "y": 1.5
+      },
+      "id": 473
+    },
+    "paralyzingReap": {
+      "name_en": "Paralyzing Reap",
+      "name_jp": "痺止の鎌",
+      "desc": "Deals melee cut damage to one row. If Miasma Armor is active, attempts to inflict paralysis.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 0,
+        "y": 3
+      },
+      "id": 474
+    },
+    "toxicReap": {
+      "name_en": "Toxic Reap",
+      "name_jp": "惨毒の鎌",
+      "desc": "Deals melee cut damage to one row. If Miasma Armor is active, attempts to inflict poison.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "474": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 1,
+        "y": 3
+      },
+      "id": 475
+    },
+    "miasmaArmor": {
+      "name_en": "Miasma Armor",
+      "name_jp": "瘴気の兵装",
+      "desc": "Puts the user in the Miasma Armor state for 3 turns. Increases action speed when Miasma Armor is active. At the start of battle, automatically puts the user in the Miasma Armor state.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 4,
+      "coords": {
+        "x": 0,
+        "y": 4.5
+      },
+      "id": 476
+    },
+    "endlessShroud": {
+      "name_en": "Endless Shroud",
+      "name_jp": "終わりなき衣",
+      "desc": "When the user uses a debuff skill, there's a chance to cast Miasma Armor automatically.",
+      "stats": [],
+      "dep": {
+        "476": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 4
+      },
+      "id": 477
+    },
+    "atonement": {
+      "name_en": "Atonement",
+      "name_jp": "贖いの血",
+      "desc": "Requires Miasma Armor. Removes Miasma Armor to restore HP to all party members and attempt to remove their ailments.",
+      "stats": [],
+      "dep": {
+        "476": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 1,
+        "y": 5
+      },
+      "id": 478
+    },
+    "take": {
+      "name_en": "Take",
+      "name_jp": "採取",
+      "desc": "Occasionally gains more items when using Take points.",
+      "stats": [],
+      "unique": true,
+      "dep": { },
+      "maxLevel": 1,
+      "coords": {
+        "x": 0,
+        "y": 6
+      },
+      "id": 479
+    },
+    "wiltingMiasma": {
+      "name_en": "Wilting Miasma",
+      "name_jp": "虚弱の瘴気",
+      "desc": "For a set number of turns, decreases all enemies' resistance to and rate of recovery from ailments.",
+      "stats": [],
+      "dep": {
+        "473": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 2,
+        "y": 1.5
+      },
+      "id": 480
+    },
+    "arrestingMiasma": {
+      "name_en": "Arresting Miasma",
+      "name_jp": "縛弱の瘴気",
+      "desc": "For a set number of turns, decreases all enemies' resistance to and rate of recovery from binds.",
+      "stats": [],
+      "dep": {
+        "480": 3
+      },
+      "maxLevel": 10,
+      "coords": {
+        "x": 3,
+        "y": 1.5
+      },
+      "id": 481
+    },
+    "darknessReap": {
+      "name_en": "Darkness Reap",
+      "name_jp": "深闇の鎌",
+      "desc": "Deals melee cut damage to one row. If Miasma Armor is active, attempts to inflict blind.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "475": 2
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 3
+      },
+      "id": 482
+    },
+    "chaosReap": {
+      "name_en": "Chaos Reap",
+      "name_jp": "禍乱の鎌",
+      "desc": "Deals melee cut damage to one row. If Miasma Armor is active, attempts to inflict panic.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "482": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 3,
+        "y": 3
+      },
+      "id": 483
+    },
+    "blackShroud": {
+      "name_en": "Black Shroud",
+      "name_jp": "黒き衣",
+      "desc": "During Miasma Armor, increases defense.",
+      "stats": [],
+      "dep": {
+        "477": 1
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 2,
+        "y": 4
+      },
+      "id": 484
+    },
+    "soulTransfer": {
+      "name_en": "Soul Transfer",
+      "name_jp": "魂転移",
+      "desc": "Requires Miasma Armor. Removes Miasma Armor to attempt to revive all party members.",
+      "stats": [
+        "WIS"
+      ],
+      "dep": {
+        "478": 3
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 5
+      },
+      "id": 485
+    },
+    "blackWave": {
+      "name_en": "Black Wave",
+      "name_jp": "黒き波動",
+      "desc": "At the end of the turn, if Miasma Armor is active, restores TP to the user.",
+      "stats": [],
+      "dep": {
+        "485": 1
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 3,
+        "y": 5
+      },
+      "id": 486
+    },
+    "spiritAbsorb": {
+      "name_en": "Spirit Absorb",
+      "name_jp": "生気吸収",
+      "desc": "When the user uses a debuff skill, restores HP to the user. This restoration can heal beyond maximum HP. Overhealed HP will disappear at the end of the turn.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 6,
+      "coords": {
+        "x": 2,
+        "y": 6
+      },
+      "id": 487
+    },
+    "statusAtkUp": {
+      "name_en": "Status ATK Up",
+      "name_jp": "抑制攻撃ブースト",
+      "desc": "Increases the chance of inflicting binds and ailments.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 3,
+        "y": 6
+      },
+      "id": 488
+    },
+    "deathsAsylum": {
+      "name_en": "Death's Asylum",
+      "name_jp": "死の耐性",
+      "desc": "Provides a chance to nullify debuffs and ailments on the user as they are inflicted.",
+      "stats": [],
+      "dep": { },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 1
+      },
+      "id": 489
+    },
+    "ephemeralReap": {
+      "name_en": "Ephemeral Reap",
+      "name_jp": "泡沫の鎌",
+      "desc": "Deals multiple instances of melee cut damage to one target. Number of hits increases based on the number of debuffs on the target.",
+      "stats": [
+        "STR"
+      ],
+      "dep": { },
+      "maxLevel": 10,
+      "coords": {
+        "x": 4,
+        "y": 2
+      },
+      "id": 490
+    },
+    "fatalReap": {
+      "name_en": "Fatal Reap",
+      "name_jp": "死の鎌",
+      "desc": "Deals melee cut damage to one target. Attempts to inflict instant death.",
+      "stats": [
+        "STR",
+        "LUC"
+      ],
+      "dep": {
+        "483": 2
+      },
+      "maxLevel": 8,
+      "coords": {
+        "x": 4,
+        "y": 3
+      },
+      "id": 491
+    },
+    "miasmaWall": {
+      "name_en": "Miasma Wall",
+      "name_jp": "瘴気の防壁",
+      "desc": "Requires Miasma Armor. Removes Miasma Armor to attempt to nullify binds and ailments against all party members, up to a set number of times.",
+      "stats": [],
+      "dep": {
+        "486": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 4.5
+      },
+      "id": 492
+    },
+    "soulFixation": {
+      "name_en": "Soul Fixation",
+      "name_jp": "霊魂固着",
+      "desc": "Requires Miasma Armor. Removes Miasma Armor to attempt to nullify instant death, stun and debuffs against all party members, up to a set number of times.",
+      "stats": [],
+      "dep": {
+        "486": 1
+      },
+      "maxLevel": 6,
+      "coords": {
+        "x": 4,
+        "y": 5.5
+      },
+      "id": 493
+    },
+    "residualMiasma": {
+      "name_en": "Residual Miasma",
+      "name_jp": "瘴気残留",
+      "desc": "Skills which remove Miasma Armor will instead reduce its duration by a set number of turns. If Miasma Armor's duration reaches 0 or less, it is removed.",
+      "stats": [],
+      "dep": {
+        "492": 2,
+        "493": 2
+      },
+      "maxLevel": 4,
+      "coords": {
+        "x": 5,
+        "y": 5
+      },
+      "id": 494
+    }
+  }
+}

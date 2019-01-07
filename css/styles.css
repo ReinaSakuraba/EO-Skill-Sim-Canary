@@ -34,15 +34,22 @@
 
 body {
   background-color: var(--body-background);
-  font-family: Helvetica, Arial;
+  font-family: Helvetica, Arial, sans-serif;
   color: var(--available-highlight);
-  margin: 0px;
+  margin: 0;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+}
+
+img.grayscale {
+  -webkit-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+       -o-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 p {
@@ -113,7 +120,7 @@ td {
 #header-main div {
   display: flex;
   flex-direction: column;
-  margin: 0px 15px 0px 15px;
+  margin: 0 15px 0 15px;
 }
 
 #header-links {
@@ -155,7 +162,7 @@ td {
   background-color: var(--background);
 }
 
-.skill-name-en {
+.skill-name {
   margin-left: 4px;
   color: var(--highlight);
   font-size: 15px;
