@@ -312,7 +312,7 @@ class Simulator {
   }
 
   get secondaryPenalty() {
-    return 1;
+    return null;
   }
 
   constructor ({classClass=Class, skillClass=Skill}) {
@@ -333,6 +333,7 @@ class Simulator {
 
     query !== "" ? this.loadSaveData(query) : this.setDefault();
 
+    document.getElementById("main").style.height = this.secondaryPenalty === null ? "300px" : "600px";
     const trees = document.querySelectorAll(".tree");
     for (const tree of trees) {
       tree.style.width = `${treeWidth}px`;
