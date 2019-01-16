@@ -37,7 +37,7 @@ class EOXSimulator extends Simulator {
     ];
   }
 
-  get secondaryPenalty() {
+  get subClassPenalty() {
     return 2;
   }
 
@@ -52,13 +52,13 @@ class EOXSimulator extends Simulator {
   }
 
   get class() {
-    return this.classes[this._class] || "None";
+    return this.classes[this._class] || null;
   }
   set class(value) {
     const old = this.class;
-    if (old !== "None") old.resetSkillLevels();
+    if (old) old.resetSkillLevels();
 
-    this._class = value === "None" ? "None" : parseInt(value);
+    this._class = value;
     document.getElementById("class-selector-primary").value = value;
     this.class.vampire = this.vampire;
     this.disableClasses();
@@ -78,54 +78,24 @@ class EOXSimulator extends Simulator {
 
   setDefault() {
     this.class = 0;
-    this.subClass = "None";
+    this.subClass = null;
     this.levelCap = 0;
     this.currentLevel = 1;
     this.retireLevel = 0;
     this.vampire = false;
   }
 
-  generateSaveData() {
-    const hasSub = this._subClass !== "None";
-
-    const length = 6 + this.class.skills.length * (hasSub ? 2 : 1);
-    const view = new Uint8Array(length);
-
-    let currentPos = 0;
-
-    view[currentPos++] = this._class + 1;
-    view[currentPos++] = hasSub ? this._subClass + 1 : 0;
-    view[currentPos++] = this._currentLevel;
-    view[currentPos++] = this._levelCap;
-    view[currentPos++] = this._retireLevel;
-    view[currentPos++] = +this._vampire;
-
-    for (const cls of [this.class, this.subClass]) {
-      if (cls === "None") continue;
-      for (const skill of cls.skills) view[currentPos++] = skill.level;
-    }
-
-    const saveData = btoa(String.fromCharCode(...view));
-
-    return LZString.compressToEncodedURIComponent(saveData);
+  get additionalSaveLength() {
+    return 1;
   }
 
-  loadSaveData(queryString) {
-    const saveData = LZString.decompressFromEncodedURIComponent(queryString);
-    const view = Uint8Array.from(atob(saveData), c => c.charCodeAt(0));
+  generateAdditionalSaveData(view, currentPos) {
+    view[currentPos++] = +this._vampire;
+    return [view, currentPos];
+  }
 
-    let currentPos = 0;
-
-    this.class = view[currentPos++] - 1;
-    this.subClass = view[currentPos] === 0 ? "None" : view[currentPos] - 1;
-    this.currentLevel = view[++currentPos];
-    this.levelCap = view[++currentPos];
-    this.retireLevel = view[++currentPos];
-    this.vampire = !!view[++currentPos];
-
-    for (const cls of [this.class, this.subClass]) {
-      if (cls === "None") continue;
-      for (const skill of cls.skills) skill.level = view[++currentPos];
-    }
+  loadAdditionalSaveData(view, currentPos) {
+    this.vampire = !!view[currentPos++];
+    return [view, currentPos];
   }
 }

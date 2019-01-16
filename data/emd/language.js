@@ -202,14 +202,14 @@ const skillHeaderTrans = [
 ];
 
 const classNameTrans = [
-  [ 0, "Landsknecht", ""],
-  [ 1,   "Protector", ""],
-  [ 2,      "Gunner", ""],
-  [ 3,  "Runemaster", ""],
-  [ 4,       "Medic", ""],
-  [ 5,      "Dancer", ""],
-  [ 6,       "Hexer", ""],
-  [ 7,       "Ninja", ""],
-  [ 8,   "Sovereign", ""],
-  [ 9,    "Wanderer", ""]
+  [0, "Landsknecht", ""],
+  [1,   "Protector", ""],
+  [2,      "Gunner", ""],
+  [3,  "Runemaster", ""],
+  [4,       "Medic", ""],
+  [5,      "Dancer", ""],
+  [6,       "Hexer", ""],
+  [7,       "Ninja", ""],
+  [8,   "Sovereign", ""],
+  [9,    "Wanderer", ""]
 ];

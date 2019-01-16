@@ -198,20 +198,20 @@ const skills = [
   [196, 4, 1, 20,  8, 188,                     [[187, 3]],                             []], // Airstrike
   [197, 4, 2, 20,  5, 189,                             [],                             []], // Haste Self
   [198, 4, 3, 20,  5, 190,                             [],                             []], // Slow Monster
-  [199, 4, 4, 20,  3, 191,                     [[192, 3]],                             []], // Dig
+  [199, 4, 4, 20,  3, 191,                     [[192, 3]],                             []]  // Dig
 ];
 
 const classes = [
-  [ 0,  0, [...Array(20).keys()]], // Landksnecht
-  [ 1,  1, [...Array(20).keys()].map(i => i + 20)], // Protector
-  [ 2,  2, [...Array(20).keys()].map(i => i + 20 * 2)], // Gunner
-  [ 3,  3, [...Array(20).keys()].map(i => i + 20 * 3)], // Runemaster
-  [ 4,  4, [...Array(20).keys()].map(i => i + 20 * 4)], // Medic
-  [ 5,  5, [...Array(20).keys()].map(i => i + 20 * 5)], // Dancer
-  [ 6,  6, [...Array(20).keys()].map(i => i + 20 * 6)], // Hexer
-  [ 7,  7, [...Array(20).keys()].map(i => i + 20 * 7)], // Ninja
-  [ 8,  8, [...Array(20).keys()].map(i => i + 20 * 8)], // Sovereign
-  [ 9,  9, [...Array(20).keys()].map(i => i + 20 * 9)], // Wanderer
+  [0, 0, [...Array(20).keys()]], // Landksnecht
+  [1, 1, [...Array(20).keys()].map(i => i + 20)], // Protector
+  [2, 2, [...Array(20).keys()].map(i => i + 20 * 2)], // Gunner
+  [3, 3, [...Array(20).keys()].map(i => i + 20 * 3)], // Runemaster
+  [4, 4, [...Array(20).keys()].map(i => i + 20 * 4)], // Medic
+  [5, 5, [...Array(20).keys()].map(i => i + 20 * 5)], // Dancer
+  [6, 6, [...Array(20).keys()].map(i => i + 20 * 6)], // Hexer
+  [7, 7, [...Array(20).keys()].map(i => i + 20 * 7)], // Ninja
+  [8, 8, [...Array(20).keys()].map(i => i + 20 * 8)], // Sovereign
+  [9, 9, [...Array(20).keys()].map(i => i + 20 * 9)]  // Wanderer
 ];
 
 const levels = [

@@ -51,7 +51,6 @@ class Skill {
     this.trans = info[5];
     this._prereqs = info[6];
     this._forwards = info[7];
-    this.class = null;
     try {
       this.levelData = levels[this.trans][1].map(i => new LevelData(i, this));
     } catch(e) {}
@@ -71,7 +70,9 @@ class Skill {
   }
 
   get maxLevel() {
-    return this._maxLevel / (this.class === this.simulator.secondaryClass ? this.simulator.secondaryPenalty : 1);
+    if (!this.simulator.subClass) return this._maxLevel;
+
+    return this._maxLevel / (this.simulator.subClass._skills.includes(this.id) ? this.simulator.subClassPenalty : 1);
   }
 
   get prereqs() {
@@ -102,151 +103,6 @@ class Skill {
       for (const [skill, reqLevel] of this.forwards) if (skill.level > 0 && value < reqLevel) skill.level = 0;
     }
     this.simulator.updateNodes();
-  }
-
-  // Remove everything below this comment
-  createInfoNode() {
-    return;
-    const maxLevel = this.levelData && this.levelData.length > 0 ? this.levelData[0].levels.length : 1;
-
-    const tableLength = 1 + maxLevel;
-
-    const skillInfo = document.createElement("div");
-    skillInfo.classList.add("skill-info");
-    skillInfo.style.display = "none";
-    skillInfo.id = `skill-info-${this.id}`;
-
-    const infoTable = document.createElement("table");
-
-    const nameTitleRow = document.createElement("tr");
-
-    const nameTitle = document.createElement("th");
-    nameTitle.textContent = "Name";
-    nameTitleRow.appendChild(nameTitle);
-
-    const usesTitle = document.createElement("th");
-    usesTitle.textContent = "Uses";
-    usesTitle.colSpan = maxLevel;
-    nameTitleRow.appendChild(usesTitle);
-
-    infoTable.appendChild(nameTitleRow);
-
-    const nameRow = document.createElement("tr");
-
-    const name = document.createElement("td");
-    name.textContent = this.name;
-    nameRow.appendChild(name);
-
-    const usesText = "N/A";
-
-    const uses = document.createElement("td");
-    uses.textContent = usesText;
-    uses.colSpan = maxLevel;
-    nameRow.appendChild(uses);
-
-    infoTable.appendChild(nameRow);
-
-    const descriptionRow = document.createElement("tr");
-
-    const description = document.createElement("td");
-    description.textContent = this.description;
-    description.classList.add("skill-description");
-    description.colSpan = tableLength;
-    descriptionRow.appendChild(description);
-
-    infoTable.appendChild(descriptionRow);
-
-    if (this.levelData) {
-      let levelHeader = document.createElement("tr");
-
-      let levelType = document.createElement("th");
-      levelType.textContent = this.maxLevel === 0 ? "Stage" : "Level";
-      levelHeader.appendChild(levelType);
-
-      for (let i of [...Array(maxLevel).keys()].map(i => ++i)) {
-        let level = document.createElement("th");
-        level.textContent = i.toString();
-        if (i === this.level) level.classList.add("info-current-level");
-        levelHeader.appendChild(level);
-      }
-      infoTable.appendChild(levelHeader);
-
-      for (const info of this.levelData) {
-        let attributeRow = document.createElement("tr");
-
-        let attributeName = document.createElement("th");
-        attributeName.textContent = info.name;
-        attributeRow.appendChild(attributeName);
-
-        let currentLevel = 0;
-        while (currentLevel + 1 <= info.levels.length) {
-          let attributeCell = document.createElement("td");
-          let attributeValue = info.levels[currentLevel];
-          let colspan = 1;
-
-          while (info.levels[++currentLevel] === attributeValue) ++colspan;
-
-          if (this.level >= currentLevel + 1 - colspan && currentLevel + 1 > this.level)
-            attributeCell.classList.add("info-current-level");
-
-          attributeCell.colSpan = colspan;
-          attributeCell.textContent = attributeValue;
-          attributeRow.appendChild(attributeCell);
-        }
-        infoTable.appendChild(attributeRow);
-      }
-    }
-    skillInfo.appendChild(infoTable);
-    document.body.appendChild(skillInfo);
-    this.setDimensions();
-  }
-
-  showInfoNode() {
-    document.getElementById(`skill-info-${this.id}`).style.display = "initial";
-    this.setPosition();
-  }
-
-  hideInfoNode() {
-    document.getElementById(`skill-info-${this.id}`).style.display = "none";
-  }
-
-  setDimensions() {
-    const infoNode = document.getElementById(`skill-info-${this.id}`);
-    infoNode.style.display = "initial";
-    infoNode.style.width = "";
-
-    const desc = infoNode.getElementsByClassName("skill-description")[0];
-
-    desc.style.display = "none";
-
-    let infoRect = infoNode.getBoundingClientRect();
-
-    const width = infoRect.width;
-
-    infoNode.style.width = `${width}px`;
-
-    desc.style.display = "";
-    infoNode.style.display = "none";
-  }
-
-  setPosition() {
-    const infoNode = document.getElementById(`skill-info-${this.id}`);
-    const skillNode = document.getElementById(`skill-${this.id}`);
-
-    const infoRect = infoNode.getBoundingClientRect();
-    const skillRect = skillNode.getBoundingClientRect();
-
-    const width = infoRect.width;
-    const height = infoRect.height;
-
-    let posX = skillRect.left + 7 + window.scrollX;
-    let posY = skillRect.top + nodeHeight + verticalPadding + window.scrollY;
-
-    if (window.innerWidth < posX + width) posX = window.innerWidth + window.scrollX - width - 17;
-    if (window.innerHeight < posY + height) posY = skillRect.top + window.scrollY - height - verticalPadding + 5;
-
-    infoNode.style.left = `${posX}px`;
-    infoNode.style.top = `${posY}px`;
   }
 }
 
@@ -311,7 +167,7 @@ class Simulator {
     ];
   }
 
-  get secondaryPenalty() {
+  get subClassPenalty() {
     return null;
   }
 
@@ -333,7 +189,9 @@ class Simulator {
 
     query !== "" ? this.loadSaveData(query) : this.setDefault();
 
-    document.getElementById("main").style.height = this.secondaryPenalty === null ? "300px" : "600px";
+    const treeAmount = this.subClassPenalty === null ? 1 : 2;
+
+    document.getElementById("main").style.height = `${treeHeight * treeAmount + verticalBuffer * treeAmount}px`;
     const trees = document.querySelectorAll(".tree");
     for (const tree of trees) {
       tree.style.width = `${treeWidth}px`;
@@ -382,13 +240,13 @@ class Simulator {
   }
 
   get class() {
-    return this.classes[this._class] || "None";
+    return this.classes[this._class] || null;
   }
   set class(value) {
     const old = this.class;
-    if (old !== "None") old.resetSkillLevels();
+    if (old) old.resetSkillLevels();
 
-    this._class = value === "None" ? "None" : parseInt(value);
+    this._class = value;
     document.getElementById("class-selector-primary").value = value;
     this.disableClasses();
     this.createSkillNodes();
@@ -396,13 +254,13 @@ class Simulator {
   }
 
   get subClass() {
-    return this.classes[this._subClass] || "None";
+    return this.classes[this._subClass] || null;
   }
   set subClass(value) {
     const old = this.subClass;
-    if (old !== "None") old.resetSkillLevels();
+    if (old) old.resetSkillLevels();
 
-    this._subClass = value === "None" ? "None" : parseInt(value);
+    this._subClass = value;
     document.getElementById("class-selector-secondary").value = value;
     this.disableClasses(false);
     this.createSkillNodes(false);
@@ -414,7 +272,7 @@ class Simulator {
   }
 
   get pointsTotal() {
-    return 2 + this.currentLevel + (this.subClass !== "None" ? 5 : 0) + this.retireBonus;
+    return 2 + this.currentLevel + (this.subClass ? 5 : 0) + this.retireBonus;
   }
 
   get pointsCurrent() {
@@ -438,7 +296,7 @@ class Simulator {
 
   setDefault() {
     this.class = 0;
-    this.subClass = "None";
+    this.subClass = null;
     this.levelCap = 0;
     this.currentLevel = 1;
     this.retireLevel = 0;
@@ -482,6 +340,14 @@ class Simulator {
   }
 
   setRetireLevels() {
+    const levelSelect = document.getElementById("level");
+    const self = this;
+
+    levelSelect.addEventListener("change", function() {
+      self.currentLevel = this.value;
+      self.updateURI();
+    });
+
     if (this.retireBonuses.length === 0) return;
 
     const retireSelect = document.getElementById("retire");
@@ -494,16 +360,8 @@ class Simulator {
       retireSelect.appendChild(option);
     }
 
-    const levelSelect = document.getElementById("level");
-    const self = this;
-
     retireSelect.addEventListener("change", function() {
       self.retireLevel = this.value;
-      self.updateURI();
-    });
-
-    levelSelect.addEventListener("change", function() {
-      self.currentLevel = this.value;
       self.updateURI();
     });
   }
@@ -533,8 +391,9 @@ class Simulator {
 
       const self = this;
       document.getElementById(id).addEventListener("change", function() {
-        if (thing === "primary") { self.class = this.value; }
-        else { self.subClass = this.value; }
+        const value = this.value !== "None" ? parseInt(this.value) : null;
+        if (thing === "primary") { self.class = value; }
+        else { self.subClass = value; }
 
         self.updateURI();
       });
@@ -548,7 +407,7 @@ class Simulator {
     for (const option of options) option.disabled = false;
 
     const cls = primary ? this.class : this.subClass;
-    if (cls === "None") return;
+    if (!cls) return;
 
     document.querySelector(`${id} option[value="${cls.id}"]`).disabled = true;
   }
@@ -560,13 +419,13 @@ class Simulator {
     while (sectionLayer.lastChild) sectionLayer.removeChild(sectionLayer.lastChild);
 
     const cls = primary ? this.class : this.subClass;
-    if (cls === "None") return;
+    if (!cls) return;
 
     for (const skill of cls.skills) {
       if (skill.unique && section === "secondary") continue;
 
-      const x = skill.coords["x"] * horizontalBuffer;
-      const y = skill.coords["y"] * verticalBuffer;
+      const x = skill.coords.x * horizontalBuffer;
+      const y = skill.coords.y * verticalBuffer;
 
       const node = document.createElement("div");
       node.classList.add("skill");
@@ -606,9 +465,9 @@ class Simulator {
       sectionLayer.appendChild(node);
 
       Simulator.drawLines(sectionLayer, skill);
-
-      skill.createInfoNode();
     }
+
+    for (const skill of cls.skills) Simulator.drawLevels(sectionLayer, skill);
 
     this.updateNodes();
 
@@ -627,16 +486,6 @@ class Simulator {
         const [, skillID] = node.id.split("-");
         self.skills[skillID].level -= 1;
         self.updateURI();
-      });
-
-      node.addEventListener("mouseenter", function() {
-        const [, skillID] = node.id.split("-");
-        // self.skills[skillID].showInfoNode();
-      });
-
-      node.addEventListener("mouseleave", function() {
-        const [, skillID] = node.id.split("-");
-        // self.skills[skillID].hideInfoNode();
       });
     }
   }
@@ -658,37 +507,50 @@ class Simulator {
         const minY = Math.min(...forwardYs);
         const maxY = Math.max(...forwardYs);
 
-        const x = forwardX * horizontalBuffer - horizontalPadding / 2 + nodeBorder * 2;
+        const x = forwardX * horizontalBuffer - horizontalPadding / 2;
         const y = minY * verticalBuffer + nodeHeight / 2;
-        Simulator.drawVerticalLine(tree, x, y, verticalBuffer * (maxY - minY));
-      }
-
-      const level = skill.forwards[0][1];
-      if (level !== 0) {
-        const levelReq = document.createElement("div");
-        levelReq.textContent = `Lv${level}`;
-        levelReq.classList.add("level-req");
-        levelReq.style.left = `${startX}px`;
-        levelReq.style.top = `${startY - 10}px`;
-        tree.appendChild(levelReq);
+        Simulator.drawVerticalLine(tree, x, y, verticalBuffer * (maxY - minY) + 4);
       }
     }
 
     if (skill.prereqs.length > 0) {
-      const startX = skill.coords.x * horizontalBuffer - horizontalPadding / 2 + nodeBorder * 4;
+      const startX = skill.coords.x * horizontalBuffer - horizontalPadding / 2;
       const startY = skill.coords.y * verticalBuffer + nodeHeight / 2;
 
-      Simulator.drawHorizontalLine(tree, startX, startY, horizontalPadding / 2 - nodeBorder * 6);
+      Simulator.drawHorizontalLine(tree, startX, startY, horizontalPadding / 2);
 
       if (skill.prereqs.length > 1) {
         const depYs = skill.prereqs.map(([dep,]) => dep.coords.y);
         const minY = Math.min(...depYs);
         const maxY = Math.max(...depYs);
 
-        const x = skill.coords.x * horizontalBuffer - horizontalPadding / 2 + nodeBorder * 2;
+        const x = skill.coords.x * horizontalBuffer - horizontalPadding / 2;
         const y = minY * verticalBuffer + nodeHeight / 2;
-        Simulator.drawVerticalLine(tree, x, y, verticalBuffer * (maxY - minY));
+        Simulator.drawVerticalLine(tree, x, y, verticalBuffer * (maxY - minY) + 4);
       }
+    }
+  }
+
+  static drawLevels(tree, skill) {
+    if (skill.forwards.length === 0) return;
+
+    const startX = skill.coords.x * horizontalBuffer + nodeWidth + nodeBorder * 2;
+    const startY = skill.coords.y * verticalBuffer + nodeHeight / 2;
+
+    const levels = [...new Set(skill.forwards.map(([,level]) => level))];
+    const multi = levels.length > 1;
+
+    for (const [forward, level] of skill.forwards) {
+      if (level === 0) continue;
+
+      const levelReq = document.createElement("div");
+      levelReq.classList.add("level-req");
+      levelReq.textContent = `Lv${level}`;
+      levelReq.style.left = `${startX + 13}px`;
+      levelReq.style.top = `${multi ? forward.coords.y * verticalBuffer + nodeHeight / 2 - 10 : startY - 10}px`;
+      tree.appendChild(levelReq);
+
+      if (!multi) break;
     }
   }
 
@@ -696,7 +558,7 @@ class Simulator {
     const line = document.createElement("div");
     line.classList.add("line");
     line.style.width = "4px";
-    line.style.height = `${length + 4}px`;
+    line.style.height = `${length}px`;
     line.style.left = `${x}px`;
     line.style.top = `${y}px`;
     tree.appendChild(line);
@@ -705,7 +567,7 @@ class Simulator {
   static drawHorizontalLine(tree, x, y, length) {
     const line = document.createElement("div");
     line.classList.add("line");
-    line.style.width = `${length + 4}px`;
+    line.style.width = `${length}px`;
     line.style.height = "4px";
     line.style.left = `${x}px`;
     line.style.top = `${y}px`;
@@ -739,35 +601,73 @@ class Simulator {
     if (saveData !== history.state) history.pushState(saveData, "", `?${saveData}`);
   }
 
+  get additionalSaveLength() {
+    return 0;
+  }
+
   generateSaveData() {
-    const length = 4 + this.class.skills.length;
-    const view = new Uint8Array(length);
+    const canSub = this.subClassPenalty !== null;
+    const canUnlockCap = this.levelCaps.length !== 1;
+    const canRetire = this.retireBonuses.length !== 0;
+
+    const hasSub = !!this.subClass;
+
+    const length = 2 + (canSub ? 1 : 0) + (canUnlockCap ? 1 : 0) + (canRetire ? 1 : 0) +
+      this.class.skills.length + (hasSub ? this.subClass.skills.length : 0) + this.additionalSaveLength;
+    let view = new Uint8Array(length);
 
     let currentPos = 0;
 
     view[currentPos++] = this._class + 1;
+    if (canSub) view[currentPos++] = hasSub ? this._subClass + 1 : 0;
     view[currentPos++] = this._currentLevel;
-    view[currentPos++] = this._levelCap;
-    view[currentPos++] = this._retireLevel;
+    if (canUnlockCap) view[currentPos++] = this._levelCap;
+    if (canRetire) view[currentPos++] = this._retireLevel;
 
-    for (const skill of this.class.skills) view[currentPos++] = skill.level;
+    [view, currentPos] = this.generateAdditionalSaveData(view, currentPos);
+
+    for (const cls of [this.class, this.subClass]) {
+      if (!cls) continue;
+      for (const skill of cls.skills) view[currentPos++] = skill.level;
+    }
 
     const saveData = btoa(String.fromCharCode(...view));
 
     return LZString.compressToEncodedURIComponent(saveData);
   }
 
+  generateAdditionalSaveData(view, currentPos) {
+    return [view, currentPos];
+  }
+
   loadSaveData(queryString) {
+    const canSub = this.subClassPenalty !== null;
+    const canUnlockCap = this.levelCaps.length !== 1;
+    const canRetire = this.retireBonuses.length !== 0;
+
     const saveData = LZString.decompressFromEncodedURIComponent(queryString);
-    const view = Uint8Array.from(atob(saveData), c => c.charCodeAt(0));
+    let view = Uint8Array.from(atob(saveData), c => c.charCodeAt(0));
 
     let currentPos = 0;
 
     this.class = view[currentPos++] - 1;
+    if (canSub) {
+      const sub = view[currentPos++];
+      this.subClass = sub === 0 ? null : sub - 1;
+    }
     this.currentLevel = view[currentPos++];
-    this.levelCap = view[currentPos++];
-    this.retireLevel = view[currentPos++];
+    this.levelCap = canUnlockCap ? view[currentPos++] : 0;
+    this.retireLevel = canRetire ? view[currentPos++] : 0;
 
-    for (const skill of this.class.skills) skill.level = view[currentPos++];
+    [view, currentPos] = this.loadAdditionalSaveData(view, currentPos);
+
+    for (const cls of [this.class, this.subClass]) {
+      if (!cls) continue;
+      for (const skill of cls.skills) skill.level = view[currentPos++];
+    }
+  }
+
+  loadAdditionalSaveData(view, currentPos) {
+    return [view, currentPos];
   }
 }
