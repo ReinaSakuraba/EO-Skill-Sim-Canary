@@ -705,7 +705,7 @@ class Simulator {
 
       const option = document.createElement("option");
       option.value = i;
-      option.textContent = `${i}: ${cookie ? cookie.split(";")[0] : "Empty"}`;
+      option.textContent = `${i}: ${cookie ? cookie.split("?")[0] : "Empty"}`;
       saveSelect.appendChild(option);
     }
   }
