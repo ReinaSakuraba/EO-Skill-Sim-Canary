@@ -676,13 +676,17 @@ class Simulator {
   }
 
   saveSave() {
-    const name = document.getElementById("save-name").value || `${this.class.name}`;
+    let name = document.getElementById("save-name").value;
+    if (name.replace(" ", "") === "") name = `${this.class.name + (this.subClass ? "/" + this.subClass.name : "")}`;
+
     const slot = document.getElementById("save-selector").value;
     const saveData = this.generateSaveData();
 
-    Simulator.setCookie(`save-${slot}`, `${name}?${saveData}`, 365);
+    Simulator.setCookie(`save-${slot}`, encodeURIComponent(`${name}?${saveData}`), 365);
     Simulator.loadSaveSlots();
     document.getElementById("save-selector").value = slot;
+
+    alert(`Build "${name}" saved to slot ${slot}.`);
   }
 
   loadSave() {
@@ -691,9 +695,12 @@ class Simulator {
 
     if (!cookie) return;
 
-    const [, saveData] = cookie.split("?");
+    const [name, saveData] = cookie.split("?");
 
+    document.getElementById("save-name").value = decodeURIComponent(name);
     this.loadSaveData(saveData);
+
+    alert(`Build "${name}" loaded from slot ${slot}.`);
   }
 
   static loadSaveSlots() {
