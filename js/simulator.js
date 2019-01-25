@@ -198,12 +198,16 @@ class Simulator {
       tree.style.height = `${treeHeight}px`;
     }
     document.body.style.minWidth = `${treeWidth}px`;
+
+    document.getElementById("save-button").addEventListener("click", () => this.saveSave());
+    document.getElementById("load-button").addEventListener("click", () => this.loadSave());
   }
 
   init() {
     this.setLevelCaps();
     this.setRetireLevels();
     this.setClasses();
+    Simulator.loadSaveSlots();
   }
 
   get currentLevel() {
@@ -669,5 +673,59 @@ class Simulator {
 
   loadAdditionalSaveData(view, currentPos) {
     return [view, currentPos];
+  }
+
+  saveSave() {
+    const name = document.getElementById("save-name").value || `${this.class.name}`;
+    const slot = document.getElementById("save-selector").value;
+    const saveData = this.generateSaveData();
+
+    Simulator.setCookie(`save-${slot}`, `${name}?${saveData}`, 365);
+    Simulator.loadSaveSlots();
+    document.getElementById("save-selector").value = slot;
+  }
+
+  loadSave() {
+    const slot = document.getElementById("save-selector").value;
+    const cookie = Simulator.getCookie(`save-${slot}`);
+
+    if (!cookie) return;
+
+    const [, saveData] = cookie.split("?");
+
+    this.loadSaveData(saveData);
+  }
+
+  static loadSaveSlots() {
+    const saveSelect = document.getElementById("save-selector");
+    while (saveSelect.lastChild) saveSelect.removeChild(saveSelect.lastChild);
+
+    for (const i of [...Array(30).keys()].map(i => i + 1)) {
+      const cookie = Simulator.getCookie(`save-${i}`);
+
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = `${i}: ${cookie ? cookie.split(";")[0] : "Empty"}`;
+      saveSelect.appendChild(option);
+    }
+  }
+
+  static setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  }
+
+  static getCookie(name) {
+    const cookieName = `${name}=`;
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+
+    for (let cookie of cookies) {
+      while (cookie.charAt(0) === " ") cookie = cookie.substring(1);
+      if (cookie.indexOf(cookieName) === 0) return cookie.substring(cookieName.length, cookie.length);
+    }
+
+    return null;
   }
 }
