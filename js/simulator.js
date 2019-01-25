@@ -261,7 +261,7 @@ class Simulator {
     if (old) old.resetSkillLevels();
 
     this._subClass = value;
-    document.getElementById("class-selector-secondary").value = value;
+    document.getElementById("class-selector-secondary").value = value !== null ? value : "None";
     this.disableClasses(false);
     this.createSkillNodes(false);
     this.updateSkillPoints();
