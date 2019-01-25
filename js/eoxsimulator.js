@@ -49,6 +49,7 @@ class EOXSimulator extends Simulator {
       this.vampire = !this.vampire;
       this.updateURI();
     });
+    Simulator.loadSaveSlots();
   }
 
   get class() {
