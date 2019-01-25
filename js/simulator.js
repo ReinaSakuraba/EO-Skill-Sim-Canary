@@ -699,6 +699,7 @@ class Simulator {
 
     document.getElementById("save-name").value = decodeURIComponent(name);
     this.loadSaveData(saveData);
+    this.updateURI();
 
     alert(`Build "${name}" loaded from slot ${slot}.`);
   }
@@ -720,7 +721,7 @@ class Simulator {
   static setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=${window.location.pathname}`;
   }
 
   static getCookie(name) {
