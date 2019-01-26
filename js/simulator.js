@@ -682,7 +682,7 @@ class Simulator {
     const slot = document.getElementById("save-selector").value;
     const saveData = this.generateSaveData();
 
-    Simulator.setCookie(`save-${slot}`, encodeURIComponent(`${name}?${saveData}`), 365);
+    Simulator.setCookie(`save-${slot}`, `${name}?${saveData}`);
     Simulator.loadSaveSlots();
     document.getElementById("save-selector").value = slot;
 
@@ -697,7 +697,7 @@ class Simulator {
 
     const [name, saveData] = cookie.split("?");
 
-    document.getElementById("save-name").value = decodeURIComponent(name);
+    document.getElementById("save-name").value = name;
     this.loadSaveData(saveData);
     this.updateURI();
 
@@ -718,22 +718,14 @@ class Simulator {
     }
   }
 
-  static setCookie(name, value, days) {
+  static setCookie(name, value, days=365, path=window.location.pathname) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=${window.location.pathname}`;
+    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path=${path}`;
   }
 
   static getCookie(name) {
-    const cookieName = `${name}=`;
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookies = decodedCookie.split(';');
-
-    for (let cookie of cookies) {
-      while (cookie.charAt(0) === " ") cookie = cookie.substring(1);
-      if (cookie.indexOf(cookieName) === 0) return cookie.substring(cookieName.length, cookie.length);
-    }
-
-    return null;
+    const cookie = decodeURIComponent(document.cookie).match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+    return cookie ? cookie.pop() : "";
   }
 }
